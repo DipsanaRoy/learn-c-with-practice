@@ -1,6 +1,3 @@
-
----
-
 # 🌟 C Language Complete Course – Practice, Notes, Extensions & Projects
 
 **Welcome, learners! 👋**  
@@ -41,7 +38,7 @@ Perfect for **self-study, deep understanding, quick revision**, or **building a 
 
 ## 🗂️ Folder Overview (with links)
 
-*Follow folders in order for a smooth beginner journey! ➡️*
+*Follow folders in order for a smooth beginner journey!* ➡️
 
 /
 ├─ 📁 [C001_Introduction](https://github.com/DipsanaRoy/learn-c-with-practice/tree/main/C001_Introduction)
@@ -91,12 +88,13 @@ You can also explore the **different branches** of this repository to study topi
 ## 🏃‍♂️ How to Run Code
 
 ### 🔧 Using GCC (Terminal)
+
 ```bash
 gcc filename.c -o output
 ./output
 ```
 
-### 💻 Or an IDE 
+### 💻 Or an IDE
 
 Use `VS Code` (recommended) with the `C/C++ Extension Pack` and `MinGW`, or simple IDEs like `Code::Blocks` and `Dev C++`.
 
@@ -120,5 +118,3 @@ Use `VS Code` (recommended) with the `C/C++ Extension Pack` and `MinGW`, or simp
 
 This repo is licensed under the [Creative Commons BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).  
 You're free to use, share, and remix — just don't sell it! 💖
-
----
