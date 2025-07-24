@@ -1,20 +1,21 @@
+# 🌟 Welcome, Learners! 👋
+
+Here you'll find **topics that go beyond the course** — like **Data Structures**, **advanced C concepts**, and more!
+
+Driven by curiosity, I’ve explored and simplified these areas to help **fellow beginner friends** like you.
+If you’re hungry to **go further** in your learning journey, these resources will save you valuable time. 😊
+
+✨ *Just click the links below — you won’t regret it, I promise!*
 
 ---
 
-# Welcome 👋 Learners
+## 🔗 Related Repositories
 
-Here, you will find **topics beyond and after the course**, such as **Data Structures** and more.  
-I have followed my curiosity and tried my best to make these topics easier for **fellow beginner friends**.  
-If you wish to quench your thirst for knowledge, these resources can save you valuable time.
-
-*Simply **click on the links below** to visit the resources. You will not regret it, I promise:*
-
-## Links:
-
-- [Learn DSA with Practice](https://github.com/DipsanaRoy/learn-dsa-with-practice/tree/main)
-- [C Extensions](https://github.com/DipsanaRoy/c-extensions/tree/main)
-- [C Error Handling](https://github.com/DipsanaRoy/c-error-handling/tree/main)
-
-*Happy learning!*
+* 📘 [Learn DSA with Practice](https://github.com/DipsanaRoy/learn-dsa-with-practice/tree/main) – Beginner to intermediate DSA journey with code & clarity
+* 🧩 [C Extensions](https://github.com/DipsanaRoy/c-extensions/tree/main) – Dive deeper into C: beyond the basics
+* ❗ [C Error Handling](https://github.com/DipsanaRoy/c-error-handling/tree/main) – Handle runtime errors like a pro
 
 ---
+
+*Happy Learning & Keep Exploring!* 🚀
+— *Dipsana*
