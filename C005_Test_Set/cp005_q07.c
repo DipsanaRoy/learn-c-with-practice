@@ -1,7 +1,8 @@
-// CP5. Function to print the following pattern [Recursion]
+// CP5.7. Function to print the following pattern [Recursion]
 // *
 // * * *
 // * * * * *
+
 #include <stdio.h>
 
 // Function Prototype

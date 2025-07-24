@@ -1,4 +1,5 @@
-// C5. Calculate factorial
+// C5.7. Calculate factorial
+
 #include <stdio.h>
 
 // see: c5_factorial_by_recursion.md

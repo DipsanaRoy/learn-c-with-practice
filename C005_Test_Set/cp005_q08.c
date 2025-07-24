@@ -1,7 +1,8 @@
-// CP5. Function to print the following pattern
+// CP5.8. Function to print the following pattern
 // *
 // * * *
 // * * * * *
+
 #include <stdio.h>
 
 // Function Prototype

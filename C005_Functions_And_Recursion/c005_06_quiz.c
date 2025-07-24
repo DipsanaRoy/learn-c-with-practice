@@ -1,4 +1,5 @@
-// C5. Calculate area of a square by using function
+// C5.6. Calculate area of a square by using function
+
 #include<stdio.h>
 
 // Function Prototype

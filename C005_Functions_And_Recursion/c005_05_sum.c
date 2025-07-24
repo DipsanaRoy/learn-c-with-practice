@@ -1,4 +1,5 @@
-// C5. Calculate sum of two numbers using fuction
+// C5.5. Calculate sum of two numbers using fuction
+
 #include<stdio.h>
 
 // Function Prototype

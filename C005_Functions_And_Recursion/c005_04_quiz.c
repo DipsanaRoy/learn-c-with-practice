@@ -1,4 +1,5 @@
-// C5. Display three greetings of a day
+// C5.4. Display three greetings of a day
+
 #include<stdio.h>
 
 void goodMorning(), goodAfternoon(), goodNight(); // Function Prototypes

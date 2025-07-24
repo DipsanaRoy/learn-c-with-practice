@@ -1,4 +1,5 @@
-// CP5. Calculate force of attraction on a body of mass m exerted by earth
+// CP5.3. Calculate force of attraction on a body of mass m exerted by earth
+
 #include <stdio.h>
 
 // Function Prototype

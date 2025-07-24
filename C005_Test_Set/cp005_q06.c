@@ -1,4 +1,5 @@
-// CP5. Sum of first n natural numbers [Recursion]
+// CP5.6. Sum of first n natural numbers [Recursion]
+
 #include <stdio.h>
 
 // Function Prototype

@@ -1,4 +1,5 @@
-// CP5. Celsius to Fahrenheit conversion
+// CP5.2. Celsius to Fahrenheit conversion
+
 #include <stdio.h>
 
 // Function Prototype

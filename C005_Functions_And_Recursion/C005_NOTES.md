@@ -1,7 +1,4 @@
-
----
-
-# C5. 📘 `factorial(n)` – Explained Step-by-Step
+# C005. 📘 `factorial(n)` – Explained Step-by-Step
 
 ```c
 int factorial(int n)
@@ -17,27 +14,33 @@ int factorial(int n)
 ## 🧱 Function Structure Breakdown
 
 ### 1. **Function Definition**
+
 ```c
 int factorial(int n)
 ```
+
 - Declares a function named `factorial` that takes an integer `n`.
 - Returns an `int` — the factorial result.
 
 ---
 
 ### 2. **Base Case**
+
 ```c
 if (n < 2) return 1;
 ```
+
 - If `n` is `0` or `1`, it returns `1`.
 - This **stops** the recursion from going on forever — it’s the "exit door".
 
 ---
 
 ### 3. **Recursive Case**
+
 ```c
 return n * factorial(n - 1);
 ```
+
 - Function calls **itself** with `n - 1`.
 - Builds up a chain like this:  
   `factorial(4) = 4 * factorial(3)`  
@@ -62,6 +65,7 @@ factorial(4)
 ---
 
 ## 📝 Summary
+
 - Recursion is like stacking calls, then solving them backward. [`DOWN` to `UP`]
 - The **base case** ends the recursion.
 - The **recursive case** breaks the problem down.
@@ -69,8 +73,7 @@ factorial(4)
 ---
 
 ## ✨ Short Tip
-> Using **function prototypes** along with function definitions is a *good practice* in C, as it improves code clarity, program organization and helps the compiler catch errors early!
 
-> In C, it's better to return `0` and `1` for `true/false` values rather than using boolean types like `true` or `false`. Some compilers might not support them, and in the end, conditions are evaluated as integers (`0` for `false` and anything `non-zero` for `true`).
+- Using **function prototypes** along with function definitions is a *good practice* in C, as it improves code clarity, program organization and helps the compiler catch errors early!
 
----
+- In C, it's better to return `0` and `1` for `true/false` values rather than using boolean types like `true` or `false`. Some compilers might not support them, and in the end, conditions are evaluated as integers (`0` for `false` and anything `non-zero` for `true`).

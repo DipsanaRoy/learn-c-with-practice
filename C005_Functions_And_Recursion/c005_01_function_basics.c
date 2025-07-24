@@ -1,4 +1,5 @@
-// C5. Basic structure of a function
+// C5.1. Basic structure of a function
+
 #include <stdio.h>
 
 void display(); // Function Prototype
