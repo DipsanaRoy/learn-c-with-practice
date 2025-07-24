@@ -1,6 +1,4 @@
-// C1. Add two numbers
-// `%` -> percentile
-// `&` -> Andparse
+// C1.2. Add two numbers
 
 #include<stdio.h>
 

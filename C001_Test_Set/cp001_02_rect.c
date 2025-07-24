@@ -1,4 +1,5 @@
-// CP1. Calculate area of a rectangle by supplied variable by the user
+// CP1.2. Calculate area of a rectangle by supplied variable by the user
+
 #include<stdio.h>
 
 int main()

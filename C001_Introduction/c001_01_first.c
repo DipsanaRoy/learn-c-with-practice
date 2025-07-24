@@ -1,4 +1,4 @@
-// C1. My first C program.
+// C1.1. My first C program.
 // Comment: ignored by the compiler, just here for us humans.
 
 #include<stdio.h>
