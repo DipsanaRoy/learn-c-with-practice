@@ -1,4 +1,5 @@
-// C3. Even or odd number checker
+// C3.1. Even or odd number checker
+
 #include<stdio.h>
 
 int main(){

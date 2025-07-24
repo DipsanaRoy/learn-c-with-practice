@@ -1,4 +1,5 @@
-// CP3. Program regarding taxation
+// CP3.3. Program regarding taxation
+
 #include <stdio.h>
 
 int main()

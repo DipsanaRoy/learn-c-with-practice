@@ -1,4 +1,5 @@
-// C3. Check if user supplied number is less than 5 using ternary operator
+// C3.7. Check if user supplied number is less than 5 using ternary operator
+
 #include<stdio.h>
 
 int main(){

@@ -1,4 +1,5 @@
-// C3. Find grade of a student by their marks
+// C3.4. Find grade of a student by their marks
+
 #include <stdio.h>
 
 int main()

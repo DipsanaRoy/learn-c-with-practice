@@ -1,4 +1,5 @@
-// C3. Check if the entered number is 1, 2 or 3 by using if and else if clause/ladder.
+// C3.3. Check if the entered number is 1, 2 or 3 by using if and else if clause/ladder.
+
 #include <stdio.h>
 
 int main()
@@ -8,7 +9,7 @@ int main()
     scanf("%d", &number);
 
     printf("Your number is "); 
-    // Without {}, only 1 line runs after if/else if/else
+    // Without {}, only 1 line runs after if / else if / else
     if (number == 1)
         puts("1");
     else if (number == 2)

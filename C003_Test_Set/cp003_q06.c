@@ -1,4 +1,5 @@
-// CP3. Find greatest of four numbers entered by the user
+// CP3.6. Find greatest of four numbers entered by the user
+
 #include <stdio.h>
 
 int main()

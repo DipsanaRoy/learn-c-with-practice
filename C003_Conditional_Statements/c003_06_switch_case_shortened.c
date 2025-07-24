@@ -1,4 +1,5 @@
-// C3. Switch Case using rating
+// C3.6. Switch Case using rating
+
 #include <stdio.h>
 
 int main() {

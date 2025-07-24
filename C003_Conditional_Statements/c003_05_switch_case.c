@@ -1,4 +1,5 @@
-// C3. Explaining Switch Case by rating
+// C3.5. Explaining Switch Case by rating
+
 #include <stdio.h>
 
 int main()

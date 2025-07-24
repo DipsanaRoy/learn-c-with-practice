@@ -1,4 +1,5 @@
-// CP3. Program against Question 2
+// CP3.2. Program against Question 2
+
 #include <stdio.h>
 
 int main()

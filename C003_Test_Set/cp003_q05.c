@@ -1,4 +1,5 @@
-// CP3. Determine whether the entered character is lowercase or not
+// CP3.5. Determine whether the entered character is lowercase or not
+
 #include <stdio.h>
 
 int main()

@@ -1,4 +1,5 @@
-// C3. Check driving eligibility!
+// C3.2. Check driving eligibility!
+
 #include <stdio.h>
 
 int main()

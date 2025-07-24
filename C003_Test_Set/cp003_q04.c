@@ -1,7 +1,9 @@
-// CP3. Find if a year is a leap year
-#include<stdio.h>
+// CP3.4. Find if a year is a leap year
 
-int main(){
+#include <stdio.h>
+
+int main()
+{
     int year;
 
     printf("\nEnter any year: ");
@@ -12,6 +14,6 @@ int main(){
         puts("a leap year!");
     else
         puts("not a leap year!");
-    
+
     return 0;
 }
