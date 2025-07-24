@@ -1,4 +1,4 @@
-// C6. Remember: 
+// C6.2. Remember: 
 // 1. Pointers stores address.
 // 2. `*` → Value at (dereferencing)
 // 3. `&` → Address of (reference)

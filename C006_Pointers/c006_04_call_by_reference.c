@@ -1,4 +1,5 @@
-// C6. Call by reference function
+// C6.4. Call by reference function
+
 #include <stdio.h>
 
 // Function Prototypes

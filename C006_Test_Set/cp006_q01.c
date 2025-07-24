@@ -1,4 +1,5 @@
-// CP6. Print the `address` of a variable and use `it` to get the the variable value.
+// CP6.1. Print the `address` of a variable and use `it` to get the the variable value.
+
 #include <stdio.h>
 
 int main()

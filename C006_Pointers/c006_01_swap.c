@@ -1,5 +1,7 @@
-// C6. Swap two numbers
+// C6.1. Swap two numbers
+
 #include <stdio.h>
+
 void main()
 {
 	int a, b, c;

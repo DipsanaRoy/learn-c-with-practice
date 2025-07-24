@@ -1,4 +1,5 @@
-// CP6. Change a variable value to ten times its current value without using call/pass by value.
+// CP6.6. Change a variable value to ten times its current value without using call/pass by value.
+
 #include<stdio.h>
 
 // Function Prototype

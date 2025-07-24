@@ -1,4 +1,5 @@
-// CP6. Print the value of a variable i by using "pointer to pointer" type of variable
+// CP6.5. Print the value of a variable i by using "pointer to pointer" type of variable
+
 #include <stdio.h>
 
 int main()

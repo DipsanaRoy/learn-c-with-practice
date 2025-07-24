@@ -1,5 +1,6 @@
-// CP6. Change the value of a variable to ten times of its current value. Write a function and pass the value by `reference`.
-#include<stdio.h>
+// CP6.3. Change the value of a variable to ten times of its current value. Write a function and pass the value by `reference`.
+
+#include <stdio.h>
 
 // Function Prototype
 int change(int *var);
@@ -15,7 +16,7 @@ int main()
 
     change(&variable); // Function Call
 
-    printf("Value after change is %d\n", variable); 
+    printf("Value after change is %d\n", variable);
 
     return 0;
 }

@@ -1,4 +1,5 @@
-// CP6. Use a function to calculate the sum and average of two numbers. Use pointers and print the values of sum and average in main()
+// CP6.4. Use a function to calculate the sum and average of two numbers. Use pointers and print the values of sum and average in main()
+
 #include <stdio.h>
 
 // Function Prototype

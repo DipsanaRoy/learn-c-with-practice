@@ -1,4 +1,5 @@
-// C6. Call by value function
+// C6.5. Call by value function
+
 #include <stdio.h>
 
 // Function Prototype

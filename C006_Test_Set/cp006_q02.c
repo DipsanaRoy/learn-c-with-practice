@@ -1,4 +1,5 @@
-// CP6. Create a variable i. Print the address of i. Pass the variable to a function and print its address. Are these addresses same? If not why?
+// CP6.2. Create a variable i. Print the address of i. Pass the variable to a function and print its address. Are these addresses same? If not why?
+
 #include <stdio.h>
 
 // Function Prototype
