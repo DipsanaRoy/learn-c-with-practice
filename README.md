@@ -105,6 +105,13 @@ Use `VS Code` (recommended) with the `C/C++ Extension Pack` and `MinGW`, or simp
 
 ---
 
+## 📑 Changelog
+
+All notable changes to this project are documented in [`CHANGELOG.md`](https://github.com/DipsanaRoy/learn-c-with-practice/blob/main/CHANGELOG.md).  
+It follows [Semantic Versioning](https://semver.org/).
+
+---
+
 ## References  
 
 - CodeWithHarry  
