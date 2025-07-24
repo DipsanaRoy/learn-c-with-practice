@@ -1,4 +1,4 @@
-// CP2. Check whether a number is divisible by 97 or not
+// CP2.3. Check whether a number is divisible by 97 or not
 
 #include <stdio.h>
 
