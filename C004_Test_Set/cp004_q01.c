@@ -1,4 +1,5 @@
-// CP4. Print multiplication table of a given number n in reverse order
+// CP4.1. Print multiplication table of a given number n
+
 #include<stdio.h>
 
 int main(){
@@ -8,8 +9,8 @@ int main(){
     puts("Hey there! Enter a number below and I'll show you its multiplication table");
     scanf("%d", &n);
 
-    printf("\nMultiplication Table of %d in reverse order is:\n", n);
-    for (i = 10; i ; i--)
+    printf("Multiplication Table of %d is:\n", n);
+    for (i = 1; i <= 10; i++)
     {
         printf("%d x %d = %d\n", n, i, n * i);
     }

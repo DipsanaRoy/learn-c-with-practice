@@ -1,4 +1,5 @@
-// CP4. Another method to check for prime number
+// CP4.11. Another method to check for prime number
+
 #include <stdio.h>
 #include <math.h>
 
@@ -15,14 +16,14 @@ int main()
         return 0;
     }
 
-    else if (num == 2)
+    if (num == 2)
     {
         printf("2 is a prime number.\n");
         return 0;
     }
 
     // Check for even number
-    else if (num % 2 == 0)
+    if (num % 2 == 0)
     {
         printf("%d is not a prime number.\n", num);
         return 0;

@@ -1,4 +1,5 @@
-// CP4. Calculate sum of first n natural numbers using while loop
+// CP4.5. Calculate sum of first n natural numbers using while loop
+
 #include <stdio.h>
 
 int main()

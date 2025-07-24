@@ -1,4 +1,5 @@
-// CP4. C Program to the sum of numbers occurring in the multiplication table of n
+// CP4.7. C Program to the sum of numbers occurring in the multiplication table of n
+
 #include <stdio.h>
 
 int main()

@@ -1,4 +1,5 @@
-// CP4. Calculate the factorial of a given number using a for loop
+// CP4.8. Calculate the factorial of a given number using a for loop
+
 #include <stdio.h>
 
 int main()

@@ -1,4 +1,5 @@
-// C4. Print first n positive numbers using do while loop
+// C4.1. Print first n positive numbers using do while loop
+
 #include <stdio.h>
 
 int main()

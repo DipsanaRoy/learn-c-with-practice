@@ -1,4 +1,5 @@
-// C4. Print n natural numbers in reverse order
+// C4.4. Print n natural numbers in reverse order
+
 #include <stdio.h>
 
 int main()

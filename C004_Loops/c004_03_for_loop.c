@@ -1,4 +1,5 @@
-// C4. Print first n natural numbers using for loop
+// C4.3. Print first n natural numbers using for loop
+
 #include <stdio.h>
 
 int main()

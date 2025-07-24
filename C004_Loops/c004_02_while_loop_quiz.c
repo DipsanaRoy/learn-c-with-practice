@@ -1,4 +1,5 @@
-// C4. Print natural numbers from 10 to 20 when initial loop counter 'i' is initialized to 0
+// C4.2. Print natural numbers from 10 to 20 when initial loop counter 'i' is initialized to 0
+
 #include<stdio.h>
 
 int main(){
