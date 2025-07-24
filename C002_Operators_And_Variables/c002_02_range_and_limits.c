@@ -1,4 +1,5 @@
-// C2. Check `int` and `long` range using macros
+// C2.2. Check `int` and `long` range using macros
+
 #include <stdio.h>
 #include <limits.h>
 

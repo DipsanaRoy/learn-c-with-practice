@@ -1,11 +1,8 @@
+# C002. 📚 C Programming – Notes and Concepts
 
 ---
 
-# C2. 📚 C Programming – Notes and Concepts
-
----
-
-## 1. Data Type Notes
+## 1. Data Type
 
 - `int` and `long` can be the same size (e.g., 32-bit), depending on **compiler setup** and **configuration**, even on 64-bit systems.
 - Use `<limits.h>` to check ranges like `INT_MIN`, `INT_MAX`, `LONG_MIN`, `LONG_MAX`.
@@ -30,11 +27,13 @@ long myLong = 123456789L;  // Use 'L' suffix for clarity
 #### ✅ Declare Literals
 
 - **Use `LL` or `ll`** for `long long` literals:  
+
   ```c
   long long a = 1235456789LL;
   ```
 
 - **Use `L`** for `long double` literals:  
+
   ```c
   long double b = 1234567.89012L;
   ```
@@ -42,18 +41,18 @@ long myLong = 123456789L;  // Use 'L' suffix for clarity
 #### 📥 Input and 📤 Output Format Specifiers
 
 - **`%lld`** for `long long`:
+
   ```c
   scanf("%lld", &a);
   printf("Value = %lld\n", a);
   ```
 
 - **`%Lf`** for `long double`:
+
   ```c
   scanf("%Lf", &b);
   printf("Value = %Lf\n", b);
   ```
-
---- 
 
 ---
 
@@ -103,6 +102,7 @@ printf("The value of a * b = %f\n", ab);      // ❌ 'ab' isn't a valid variable
 - ⚠️ C **does not** support `^` as power operator (`^` is bitwise XOR)
 
 Use:
+
 ```c
 #include <math.h>
 pow(a, b);  // ✅ Correct way
@@ -120,6 +120,7 @@ pow(a, b);  // ✅ Correct way
 ```
 
 But with brackets:
+
 ```c
 (8 * 2) / (3 * 2) = 16 / 6 = 2
 ```
@@ -160,5 +161,3 @@ But with brackets:
 
 - Anything in `'single quotes'` → **character**
 - Anything outside quotes → **number**
-
----

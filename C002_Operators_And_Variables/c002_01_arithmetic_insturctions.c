@@ -1,4 +1,5 @@
-// C2. Arithmetic Operations
+// C2.1. Arithmetic Operations
+
 #include <stdio.h>
 
 int main()
