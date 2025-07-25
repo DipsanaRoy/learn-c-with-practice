@@ -1,11 +1,9 @@
+# PC002. Tips
 
 ---
 
-# PC2. Tips:
+## 💡 Tip 1
 
----
-
-## 💡 Tip 1:
 ```c
 char moves[] = {'r', 'p', 's'};
 char comp = moves[rand() % 3];
@@ -23,19 +21,17 @@ char comp = "rps"[rand() % 3];
 
 ---
 
-## 💡 Tip 2:
+## 💡 Tip 2
 
 **Avoid recursion** for *continue-or-stop* programs — **use loops instead**!
 
 Why?
 
 | 🚫 Recursion                     | ✅ Loops                          |
-|----------------------------------|------------------------------------|
+| -------------------------------- | ---------------------------------- |
 | Eats stack memory 💾             | Constant memory usage 🔁          |
 | Risk of crash with long use 💥   | Safe for millions of runs 🛡️      |
 | Harder to trace/debug 🧩         | Clear, linear flow 📜             |
 
 ➔ Recursion is **overkill** for simple input-based logic.  
 ➔ Use it only for **tiny programs**, **demos**, or **code golf** fun!
-
----

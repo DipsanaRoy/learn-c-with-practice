@@ -1,5 +1,5 @@
 /* PC2. Rock, paper, scissors is a game most of us have played during school time.
-   This is a C program capable of playing this game with you. */
+   This C program capable of playing this game with you. */
 
 #include <stdio.h>
 #include <stdlib.h>
