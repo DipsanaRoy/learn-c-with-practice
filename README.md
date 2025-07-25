@@ -120,7 +120,7 @@ Where:
 - `YY` → Sequential index within that chapter
 - `topic` → Brief content description
 
-> 🧠 Comment headings and note titles follow the same format for easy recovery or automation if needed.
+> 🧠 Comment headings and note titles follow the same format for easy recovery or automation if needed like `// C1.1. Description` across files (`CX.Y.`).
 
 ---
 
