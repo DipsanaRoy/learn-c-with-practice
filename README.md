@@ -105,6 +105,35 @@ Use `VS Code` (recommended) with the `C/C++ Extension Pack` and `MinGW`, or simp
 
 ---
 
+## 📝 File Naming Convention
+
+This repository uses a **standardized file naming system** for clarity, structure, and ease of navigation.
+
+**Formats**:
+
+- `cXXX_YY_topic.c` – C programs
+- `CXXX_YY_topic.md` – Notes and documentation
+
+Where:
+
+- `XXX` → Chapter/topic number
+- `YY` → Sequential index within that chapter
+- `topic` → Brief content description
+
+> 🧠 Comment headings and note titles follow the same format for easy recovery or automation if needed.
+
+---
+
+### 🛠 Why this helps
+
+- Consistent structure and easier sorting
+- Beginner-friendly for chapter-wise learning
+- Makes navigation, referencing, and recovery easier
+- Supports future multilingual or script-based automation
+- Prepares for future enhancements or merges
+
+---
+
 ## 📑 Changelog
 
 All notable changes to this project are documented in [`CHANGELOG.md`](https://github.com/DipsanaRoy/learn-c-with-practice/blob/main/CHANGELOG.md).  
