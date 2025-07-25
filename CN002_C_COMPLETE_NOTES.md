@@ -1,7 +1,32 @@
+# C001. 📄 C File Extensions
+
+| Extension | Purpose                                                    |
+| --------- | ---------------------------------------------------------- |
+| `.c`      | C source code file                                         |
+| `.h`      | Header file  — to declare functions, macros, structs, etc. |
 
 ---
 
-# C2. 📚 C Programming – Notes and Concepts
+## ✅ Example in C
+
+```c
+// main.c
+#include "myheader.h"
+
+int main() {
+    sayHello();
+    return 0;
+}
+```
+
+```c
+// myheader.h
+void sayHello();
+```
+
+---
+
+# C002. 📚 C Programming – Notes and Concepts
 
 ---
 
@@ -30,11 +55,13 @@ long myLong = 123456789L;  // Use 'L' suffix for clarity
 #### ✅ Declare Literals
 
 - **Use `LL` or `ll`** for `long long` literals:  
+
   ```c
   long long a = 1235456789LL;
   ```
 
 - **Use `L`** for `long double` literals:  
+
   ```c
   long double b = 1234567.89012L;
   ```
@@ -42,18 +69,18 @@ long myLong = 123456789L;  // Use 'L' suffix for clarity
 #### 📥 Input and 📤 Output Format Specifiers
 
 - **`%lld`** for `long long`:
+
   ```c
   scanf("%lld", &a);
   printf("Value = %lld\n", a);
   ```
 
 - **`%Lf`** for `long double`:
+
   ```c
   scanf("%Lf", &b);
   printf("Value = %Lf\n", b);
   ```
-
---- 
 
 ---
 
@@ -103,6 +130,7 @@ printf("The value of a * b = %f\n", ab);      // ❌ 'ab' isn't a valid variable
 - ⚠️ C **does not** support `^` as power operator (`^` is bitwise XOR)
 
 Use:
+
 ```c
 #include <math.h>
 pow(a, b);  // ✅ Correct way
@@ -120,6 +148,7 @@ pow(a, b);  // ✅ Correct way
 ```
 
 But with brackets:
+
 ```c
 (8 * 2) / (3 * 2) = 16 / 6 = 2
 ```
@@ -163,27 +192,31 @@ But with brackets:
 
 ---
 
-# CP2. Data Types Trivia
+# CP002. Data Types Trivia
+
 *A quick guide on how to initialize doubles, use scientific notation, and understand type promotion in C!*
 
 ## 1. Initialize Double
+
 You can initialize a `double` variable in several ways:
 
-### ➡️ Direct Initialization:
+### ➡️ Direct Initialization
+
 ```c
 double myDouble = 3.14159;
 ```
 
 ---
 
-### ➡️ Using Type Casting:
+### ➡️ Using Type Casting
+
 ```c
 double myDouble = (double)3.14159;
 ```
 
 ---
 
-### ➡️ Using Scientific Notation (Exponential form):
+### ➡️ Using Scientific Notation (Exponential form)
 
 #### Validity Check: [digits].[digits]e[+/-]digits
 
@@ -191,10 +224,12 @@ double myDouble = (double)3.14159;
 double myDouble = 1.23e4;    // Equivalent to 1.23 × 10⁴ = 12300
 double anotherDouble = 12e4; // Equivalent to 12 × 10⁴ = 120000
 ```
+
 - `e` or `E` means "**times 10 raised to**."
 - Example: `3e12` means `3 × 10¹²`.
 
 ✅ Some valid forms:
+
 ```c
 double d1 = 5e0;    // 5.0
 double d2 = 6.7e-2; // 0.067
@@ -203,6 +238,7 @@ double d4 = .5;     // 0.5
 ```
 
 ❌ Invalid:
+
 ```c
 double wrong = 4.5e.3;  // ❌ error: decimal after 'e' not allowed
 wrong = 23e54E45;       // ❌ error: only one 'e' is allowed
@@ -215,7 +251,8 @@ wrong = E;              // ❌ error: will be treated as char
 
 ---
 
-### ➡️ Using Constants:
+### ➡️ Using Constants
+
 ```c
 #include <float.h>
 double myDouble = DBL_MAX;   // Maximum value for double
@@ -224,7 +261,8 @@ double smallDouble = DBL_MIN; // Smallest positive normalized double
 
 ---
 
-### ➡️ Initializing with Other Variables:
+### ➡️ Initializing with Other Variables
+
 ```c
 int myInt = 42;
 double myDouble = myInt;  // Auto-implicit promotion from int to double
@@ -233,7 +271,8 @@ double d2 = myDouble;     // ✅
 
 ---
 
-### ➡️ Special Floating-Point Values:
+### ➡️ Special Floating-Point Values
+
 You can work with *special double values*:
 
 | Value                 | Meaning                                |
@@ -243,6 +282,7 @@ You can work with *special double values*:
 | `NaN` (Not a Number)  | Indeterminate value (`0.0 / 0.0`)      |
 
 Example:
+
 ```c
 #include <math.h>
 
@@ -256,6 +296,7 @@ double not_a_number = NAN;
 ## 2. What is Type Promotion?
 
 **Type promotion** happens when a smaller data type is automatically converted to a larger one during:
+
 - Assignments
 - Calculations (expressions)
 - Function calls
@@ -263,12 +304,14 @@ double not_a_number = NAN;
 It **avoids loss of precision** when mixing types.
 
 ✅ Example:
+
 ```c
 int a = 5;
 double b = a;  // 'a' promoted to double automatically
 ```
 
 ✅ Another Example:
+
 ```c
 int a = 5;
 float b = 2.5f;
@@ -277,7 +320,7 @@ double result = a + b;  // 'a' and 'b' promoted to double
 
 ---
 
-## 3. ⚡ Quick C Type Promotion Rules:
+## 3. ⚡ Quick C Type Promotion Rules
 
 | If you mix...        | Then C promotes... | Example                 |
 |:---------------------|:-------------------|:------------------------|
@@ -291,7 +334,7 @@ double result = a + b;  // 'a' and 'b' promoted to double
 
 ---
 
-## 4. 🎯 Final Shortcuts and Ranges:
+## 4. 🎯 Final Shortcuts and Ranges
 
 | Type          | Approximate Range          |
 |:--------------|:---------------------------|
@@ -301,21 +344,24 @@ double result = a + b;  // 'a' and 'b' promoted to double
 
 ---
 
-### 🔥 Fun Tip:
+### 🔥 Fun Tip
+
 - `15.e45` ➔ Valid (`15.0 × 10^45`)
 - `45e.45` ➔ ❌ Invalid (must be `45e2` or `45e-2`, not decimal after `e`)
 
 ---
 
-# C4. More on Loops
+# C004. More on Loops
 
 ## 1. Entry Control Loop vs Exit Control Loop  
+
 ✅ **Entry Control Loop** → **Condition is checked first, then the loop runs.**  
 ✅ **Exit Control Loop** → **Loop runs at least once, then checks the condition.**
 
 ---
 
-### Examples:
+### Examples
+
 - **Entry Control Loops** (Condition checked **before** execution)  
   - `for`  
   - `while`  
@@ -333,7 +379,8 @@ double result = a + b;  // 'a' and 'b' promoted to double
   - **Any non-zero value** is treated as **`true`**.
   - **0** is treated as **`false`**.
 
-### Example:
+### Example
+
 ```c
 if (1) // true
     printf("This will run!");
@@ -344,17 +391,19 @@ if (0) // false
 
 ---
 
-## 3. ⚠️ Be Careful: Infinite Loop Trap!
+## 3. ⚠️ Be Careful: Infinite Loop Trap
 
 Sometimes beginners accidentally cause infinite loops by missing proper initialization or condition checks.
 
-### Tricky Example:
+### Tricky Example
+
 ```c
 for (int i; i; )
 {
     // Infinite loop! because 'i' is uninitialized (random garbage value)
 }
 ```
+
 - Here, `i` contains an unknown value, which might be nonzero, causing the loop to never end!
 
 ---
@@ -363,7 +412,8 @@ for (int i; i; )
 
 This is a classic C idiom used when working with strings.
 
-### Example:
+### 🎯 Example
+
 ```c
 char *p = "hello";
 while (*p)
@@ -374,6 +424,7 @@ while (*p)
 ```
 
 ✅ **Why it stops:**  
+
 - Strings end with a **null character (`'\0'`)**, which is value **0**.
 - `*p` reads the current character.
 - So `while (*p)` means: “Run until the current character is not `'\0'`.”
@@ -386,9 +437,10 @@ while (*p)
 
 Yes! As the **initialization part of a `for` loop always executes** before the condition is checked.
 
-### Think of it as: `for` (`Init;` → `Condition;` → `Update`) → `{`...`}` 
+### Think of it as: `for` (`Init;` → `Condition;` → `Update`) → `{`...`}`
 
-### Example:
+### ⚔️ Example
+
 ```c
 int i = 5;
 for (i = 0; 0; i++)
@@ -403,7 +455,7 @@ printf("%d", i); // Output: 0
 
 ---
 
-# C5. 📘 `factorial(n)` – Explained Step-by-Step
+# C005. 📘 `factorial(n)` – Explained Step-by-Step
 
 ```c
 int factorial(int n)
@@ -419,27 +471,33 @@ int factorial(int n)
 ## 🧱 Function Structure Breakdown
 
 ### 1. **Function Definition**
+
 ```c
 int factorial(int n)
 ```
+
 - Declares a function named `factorial` that takes an integer `n`.
 - Returns an `int` — the factorial result.
 
 ---
 
 ### 2. **Base Case**
+
 ```c
 if (n < 2) return 1;
 ```
+
 - If `n` is `0` or `1`, it returns `1`.
 - This **stops** the recursion from going on forever — it’s the "exit door".
 
 ---
 
 ### 3. **Recursive Case**
+
 ```c
 return n * factorial(n - 1);
 ```
+
 - Function calls **itself** with `n - 1`.
 - Builds up a chain like this:  
   `factorial(4) = 4 * factorial(3)`  
@@ -464,6 +522,7 @@ factorial(4)
 ---
 
 ## 📝 Summary
+
 - Recursion is like stacking calls, then solving them backward. [`DOWN` to `UP`]
 - The **base case** ends the recursion.
 - The **recursive case** breaks the problem down.
@@ -471,19 +530,20 @@ factorial(4)
 ---
 
 ## ✨ Short Tip
-> Using **function prototypes** along with function definitions is a *good practice* in C, as it improves code clarity, program organization and helps the compiler catch errors early!
 
-> In C, it's better to return `0` and `1` for `true/false` values rather than using boolean types like `true` or `false`. Some compilers might not support them, and in the end, conditions are evaluated as integers (`0` for `false` and anything `non-zero` for `true`).
+- Using **function prototypes** along with function definitions is a *good practice* in C, as it improves code clarity, program organization and helps the compiler catch errors early!
+
+- In C, it's better to return `0` and `1` for `true/false` values rather than using boolean types like `true` or `false`. Some compilers might not support them, and in the end, conditions are evaluated as integers (`0` for `false` and anything `non-zero` for `true`).
 
 ---
 
-# CP5. `nth` Fibonacci Number by Recursion
+# CP005. `nth` Fibonacci Number by Recursion
 
 That function is designed to calculate the **nth Fibonacci number** using recursion.
 
 ---
 
-## 1. Base Case:
+## 1. Base Case
 
 If `n` is 0 or 1, it simply returns `n`. This stops the recursion from going on forever.
 
@@ -495,7 +555,7 @@ if (n <= 1) {
 
 ---
 
-## 2. Recursive Case:
+## 2. Recursive Case
 
 For any number greater than 1, the function calls itself to calculate the two previous Fibonacci numbers and adds them together.
 
@@ -522,26 +582,28 @@ It works kind of like solving a puzzle step by step:
 
 ### Now going up ⬆️
 
-   - Sum of `calculate(1) + calculate(0)`: 1 + 0 = 1
-   - `calculate(2)`: Returns 1 (base case)
-  - `calculate(3)`: Returns 2 (sum of `calculate(2) + calculate(1)`) [1 + 1]
- - `calculate(4)`: Returns 3 (sum of `calculate(3) + calculate(2)`)  [2 + 1]
+- Sum of `calculate(1) + calculate(0)`: 1 + 0 = 1
+- `calculate(2)`: Returns 1 (base case)
+- `calculate(3)`: Returns 2 (sum of `calculate(2) + calculate(1)`) [1 + 1]
+- `calculate(4)`: Returns 3 (sum of `calculate(3) + calculate(2)`)  [2 + 1]
 - `calculate(5)`: Returns 5 (sum of `calculate(4) + calculate(3)`)   [3 + 2]
 
 So, `calculate(5)` returns **5** – the 5th Fibonacci number!
 
 ---
 
-## 💡Tip 1: Think of it like unfolding a math formula step by step — recursion breaks the problem into smaller versions of itself.
+## 💡Tip 1: Think of it like unfolding a math formula step by step — recursion breaks the problem into smaller versions of itself
 
 ---
 
-## 💡Tip 2: You can only pass actual **values** or **function calls** that return values, like:
+## 💡Tip 2: You can only pass actual **values** or **function calls** that return values, like
+
 ```c
 printf("%d", calculate(n));
 ```
 
 - It **doesn’t** pick up values from future lines or other `printf()`s:
+
   ```c
   printf("%d");      // ❌ No value given — undefined behavior
   printf(42);        // ❌ Invalid, no format specifier
@@ -550,7 +612,7 @@ printf("%d", calculate(n));
 
 ---
 
-# C7. 📘 Array Notes
+# C007. 📘 Array Notes
 
 ---
 
@@ -559,6 +621,7 @@ printf("%d", calculate(n));
 In C, when you declare an array like `int marks[5];`, the array name `marks` represents the **address of the first element** — i.e., `&marks[0]`.
 
 So, these two are functionally **equivalent**:
+
 ```c
 int *ptr = marks;
 int *ptr = &marks[0];
@@ -571,10 +634,13 @@ This automatic conversion is called **array-to-pointer decay** — it happens wh
 ## 2. 📥 Passing Arrays to Functions
 
 When you pass an array to a function like this:
+
 ```c
 void printArray(int ptr[], int n);
 ```
+
 It’s **equivalent** to:
+
 ```c
 void printArray(int *ptr, int n);
 ```
@@ -583,7 +649,8 @@ Why? Because arrays **decay into pointers** when passed to functions. So both fo
 
 You can then use `ptr[i]` or pointer arithmetic like `*(ptr + i)` to access each element.
 
-### ✅ Example:
+### ✅ Example
+
 ```c
 printf("Element %d | value: %d\n", i + 1, ptr[i]);
 ```
@@ -594,17 +661,20 @@ printf("Element %d | value: %d\n", i + 1, ptr[i]);
 
 The address of the `n`th element in an array is calculated like this:
 
-```
+```text
 address = base_address + (n * size_of_each_element)
 ```
 
-### Example:
+### Example
+
 If an array starts at address `62302` and each `int` is `4` bytes:
-```
+
+```text
 2nd element address = 62302 + 2 * 4 = 62310
 ```
 
-### Code Form:
+### Code Form
+
 ```c
 int *ptr = arr + n; // Not multiplied by sizeof, as pointer math handles it
 ```
@@ -619,6 +689,7 @@ So `arr + 1` points to the next element automatically — **no need to manually 
 ## 4. 🤔 `i + 1` vs `i++` in `printf`
 
 Let’s look at this line:
+
 ```c
 printf("Student %d | marks in subject %d is: %d\n", i + 1, j + 1, marks[i][j]);
 ```
@@ -644,7 +715,7 @@ printf("Student %d | marks in subject %d is: %d\n", i + 1, j + 1, marks[i][j]);
 printf("Student %-2d | Marks: %d", s, m);
 ```
 
-```
+```text
 Student 1  | Marks: 78
 Student 10 | Marks: 90
 ```
@@ -652,17 +723,145 @@ Student 10 | Marks: 90
 🧹 Helps keep things aligned neatly when numbers grow.
 
 Try:
+
 - Left-align: `%-3d`
 - Right-align: `%2d`
 and see the difference in layout!
 
 ---
 
-# CP7. Pointer and Loops Dilemma
+# C007. C Size Notes
 
 ---
 
-## 1. 📌 Pointer Trivia — A Pointer Has Its Own Address!
+## 1. `%d` vs `%u` Specifier
+
+| Format Specifier | Works With     | Accepts Negative? | Extra Step Needed?   |
+|------------------|----------------|-------------------|----------------------|
+| `%d`             | `int`          | ✅ Yes            | ❌ No               |
+| `%u`             | `unsigned int` | ❌ No             | ✅ Yes (conversion) |
+
+### When to Use
+
+- Use `%d` if output is always non-negative → **faster and simpler**.
+- Use `%u` only when you're specifically dealing with `unsigned int`.
+
+### Example
+
+```c
+int result = 100;
+printf("%d\n", result); // Simpler and faster
+```
+
+---
+
+## 2. What is `sizeof`?
+
+- It **returns the size** of any object **in bytes**.
+- **Retrieves the size** of different data types and variables **based on your architecture**.
+
+### Use Case?
+
+- Perform **size-related operations** like *storing length of an array.*
+
+```c
+size_t length = sizeof(arr) / sizeof(arr[0]); // arr length = total arr size / each element size
+```
+
+#### Example: `sizeof(int), sizeof(float)`, etc
+
+---
+
+## 3. What is `size_t`?
+
+- `size_t` is a **special unsigned number** used in C to **count things** – like *how many toys in a box* 📦 or *letters in a word* 🔤
+- You can't have -5 toys, right? That's why **it can’t be negative**.
+- The computer uses it to **know how big something is**, or **how many times** to do something safely (especially in loops, arrays, and memory management).
+
+### 👩‍💻 Behind the Scenes
+
+- `size_t` is an **unsigned data type** that stores **size values in bytes**.
+- It is the **return type of `sizeof`** and used in functions like `malloc()`, `strlen()`, etc.
+- It is **defined in**:
+  - `stddef.h`
+  - `stdio.h`
+  - `stdlib.h`
+  - and some other standard headers!
+
+> 🖥️ On a 32-bit system → usually `unsigned int`  
+> 💻 On a 64-bit system → usually `unsigned long`
+
+---
+
+### 🔹 Why use `size_t`?
+
+- **Architecture-compatible** (safe for both 32-bit and 64-bit systems).
+- **No negatives** (perfect for sizes, memory allocation, and indexing).
+- **Safer and portable** coding standard.
+
+---
+
+### 🔹 Basic Use
+
+```c
+#include <stdio.h>
+
+int main() {
+    size_t count;
+    printf("Enter a number: ");
+    scanf("%zu", &count);  // %zu = correct format specifier for size_t
+    printf("You entered: %zu\n", count);
+}
+```
+
+---
+
+### 🔹 Smart Input Handling
+
+```c
+#include <stdio.h>
+
+int main() {
+    long input;
+    scanf("%ld", &input);
+
+    if (input < 0) input = -input; // Auto-correct negative inputs
+    size_t count = (size_t)input;  // Safe conversion
+
+    printf("Final count: %zu\n", count);
+}
+```
+
+---
+
+## 4. ✨ Bonus Tip: About `NULL`
+
+- `NULL` is a special constant that represents a **zero memory address** (nothing/empty pointer).
+- **It is also defined** in:
+  - `stddef.h`
+  - `stdio.h`
+  - `stdlib.h`
+  - `string.h`
+- So just like `size_t`, **you often get `NULL` automatically** with standard headers.
+
+---
+
+## 📝 Final Summary
+
+| Feature             | Detail                                             |
+|:--------------------|:---------------------------------------------------|
+| Data Type           | `size_t`                                           |
+| Format Specifier    | `%zu`                                              |
+| Safer Input Idea    | Read as `long`, correct if needed, cast to `size_t`|
+| `NULL` Available In | `stddef.h`, `stdio.h`, `stdlib.h`, `string.h`      |
+
+---
+
+# CP007. Pointer and Loops Dilemma
+
+---
+
+## 1. 📌 Pointer Trivia — A Pointer Has Its Own Address
 
 - `ptr` holds an address → `int *ptr = &arr[0];`
 - `&ptr` is the pointer’s own address.
@@ -679,7 +878,7 @@ int main() {
 }
 ```
 
-### Sample Output:
+### Sample Output
 
 ptr (points to arr[0]) = 0x7ffeefbff4b0
 &ptr (address of ptr)  = 0x7ffeefbff4b8
@@ -709,7 +908,7 @@ Let’s solve this with a fun **peon analogy** 😄
 
 ### 🤖 The Peon Analogy
 
-#### 📦 `int i;` outside the loop:
+#### 📦 `int i;` outside the loop
 
 > 🧑‍🏭 Think of a **permanent peon** sitting at a far-away desk.  
 > Every time you run a loop, you're like:  
@@ -721,14 +920,16 @@ Let’s solve this with a fun **peon analogy** 😄
 
 ---
 
-#### ⚡ `int i = 0;` inside the loop:
+#### ⚡ `int i = 0;` inside the loop
 
 > 🎯 This time, it's like hiring a **temporary peon** right where the work happens:  
 > "Hey you! I have a small task — start from 0, finish it, and leave."
 
 - The variable is created *right next to the loop*, making it **more local and faster to reach**.
 - The compiler treats it like:  
+
 > *"Cool, it's right here. I can optimize this and reuse registers smartly!"*
+
 - Cleaner and avoids unintended reuse across unrelated loops.
 
 ---
@@ -762,7 +963,7 @@ Let’s solve this with a fun **peon analogy** 😄
 
 ---
 
-# C8. String Notes in C
+# C008. String Notes in C
 
 ---
 
@@ -778,16 +979,20 @@ Let’s solve this with a fun **peon analogy** 😄
 ## 2. 🧵 String Input in C – The Safe Way
 
 ### 🚫 Avoid This: `gets(name);`
+
 ```c
 gets(name);
 ```
+
 - **Problem**: It **doesn’t check** buffer size.
 - **Risk**: **Buffer Overflow** → leads to **memory corruption**.
 
 ### ✅ Use This Instead: `fgets(name, sizeof(name), stdin);`
+
 ```c
 fgets(name, sizeof(name), stdin);
 ```
+
 | Part             | Meaning                             |
 |------------------|-------------------------------------|
 | name             | Where input is stored               |
@@ -803,6 +1008,7 @@ fgets(name, sizeof(name), stdin);
 ```c
 while (isspace((unsigned char)ch))
 ```
+
 - Checks if a character is **space**, **tab**, or **newline**.
 - ✅ Cast to `unsigned char` to prevent problems on systems where `char` is signed.
 
@@ -810,7 +1016,8 @@ while (isspace((unsigned char)ch))
 
 ## 4. 🔡 `tolower()` and `toupper()` in C
 
-### ✨ Usage:
+### ✨ Usage
+
 - `tolower(c)` → Converts uppercase to lowercase.
 - `toupper(c)` → Converts lowercase to uppercase.
 - If already the correct case → **no change**.
@@ -819,6 +1026,7 @@ while (isspace((unsigned char)ch))
 char ch = 'A';
 ch = tolower(ch); // Now ch is 'a'
 ```
+
 ✅ Always **assign back** if you want to **keep the change**.
 
 ---
@@ -836,7 +1044,8 @@ ch = tolower(ch); // Now ch is 'a'
   - User presses `Ctrl+D` (Linux/macOS) or `Ctrl+Z` (Windows).
   - Input error occurs (rare).
 
-#### Example:
+#### Example
+
 ```c
 int ch = getchar();
 if (ch == '\n')
@@ -856,6 +1065,7 @@ else
 ```c
 putchar('A'); // Prints A
 ```
+
 - Simple and fast way to print small outputs.
 
 ---
@@ -863,6 +1073,7 @@ putchar('A'); // Prints A
 ## 6. 🚨 EOF Handling Tip
 
 If you really want to **check for bad input**:
+
 - Always store `getchar()` result into an `int`.
 - Check if it's `EOF` before processing.
 - Clear buffer properly if needed (we'll discuss more in `cp8_notes.md`).
@@ -888,9 +1099,10 @@ else if (ch == 'n')
 
 ---
 
-# 🔥 CP8: Input Buffer Clearing + String Tricks (Best Practices)
+# 🔥 CP008: Input Buffer Clearing + String Tricks (Best Practices)
 
 ## 1. ✅ Why Clear the Input Buffer?
+
 - `scanf("%[^\n]", ...)` **stops at `\n`**, but **leaves `\n` in the buffer**.
 - Next input (`scanf("%c", &c)`) picks that leftover `\n` 😩 — and behaves weirdly.
 
@@ -901,10 +1113,12 @@ else if (ch == 'n')
 ---
 
 ### 🛡️ **General Method** — Safe and Easy
+
 ```c
 int ch;
 while ((ch = getchar()) != '\n' && ch != EOF);
 ```
+
 - Classic, super clear to read.
 - Best for occasional buffer clearing.
 
@@ -913,44 +1127,54 @@ while ((ch = getchar()) != '\n' && ch != EOF);
 ### ⚡ **When You Need It Often** — Cleaner and Faster
 
 #### 🧹 **Readable One-Liner**
+
 ```c
 for (int c = getchar(); c != '\n' && c != EOF; c = getchar());
 ```
+
 - Neat, beginner-friendly, and easy to debug.
 
 #### ✨ **Short & Crisp Version**
+
 ```c
 for (int c; (c = getchar()) != '\n' && c != EOF; );
 ```
+
 - Slightly shorter.
 - Cool for minimalistic coders!
 
 ---
 
 ✅ All of these:
+
 - Clear everything until a newline (`\n`) or **end of file** (`EOF`).
 - Are **simple**, **portable**, and **safe** across platforms!
 
 ---
 
 ## 3. 🌟 `getchar()` — Explained Simply
+
 - **Reads one char at a time** from the buffer.
 - Also **removes** it.
 - Keeps going in a loop → until it sees `\n` (Enter key).
-  
+
 ### Why `int` and Not `char`?
 
 1. **`getchar()` Returns an `int`**:
+
    - `getchar()` also signals when input ends using **EOF** (a special integer constant usually `-1`, not a regular character).
    - `char` can’t store `EOF` properly, so use **`int ch`**.
 
 2. **Storing `EOF` Safely**:
+
    - `int` can hold **all characters** (ASCII 0–255) plus the special **EOF**.
 
 3. **Avoiding Bugs**:
+
    - If `ch` were a `char`, `EOF` could be misinterpreted as a valid character.
 
 4. **Comparison `ch != '\n'` works fine**:
+
    - `'\n'` is treated as an **int** by the compiler (ASCII 10).
    - C **promotes** it automatically for comparison.
 
@@ -958,23 +1182,29 @@ for (int c; (c = getchar()) != '\n' && c != EOF; );
 
 ### Simple Visualization
 
-1. You type: `hello<Enter>`  
-   - The buffer has:  
-     ```
+1. You type: `hello<Enter>`
+
+   - The buffer has:
+
+     ```text
      h e l l o \n
      ```
 
 2. First `getchar()` call:
+
    - Reads `'h'` and removes it.
    - Buffer becomes:
-     ```
+
+     ```text
      e l l o \n
      ```
 
 3. Second `getchar()` call:
+
    - Reads `'e'` and removes it.
    - Buffer becomes:
-     ```
+
+     ```text
      l l o \n
      ```
 
@@ -983,6 +1213,7 @@ for (int c; (c = getchar()) != '\n' && c != EOF; );
 ---
 
 ## 4. 🚫 Do NOT Use `fflush(stdin);`
+
 - **Undefined** input stream behaviour in Standard C.
 - Works **only on some compilers** (e.g., MSVC), fails on others.
 - Not portable, not safe — **avoid** unless you *know* your environment.
@@ -990,45 +1221,72 @@ for (int c; (c = getchar()) != '\n' && c != EOF; );
 ---
 
 ## 5. 💡 `strcspn()` – Superpower String Tool
+
 ```c
 strcspn(string, "\n")
 ```
+
 - **Finds the index** of the first match from `"\n"` in the string.
 - Helps you **remove `\n` from `fgets()`**:
+
 ```c
 str[strcspn(str, "\n")] = '\0';
 ```
-🔸 This replaces the first `\n` with `\0` (null terminator).  
+
+🔸 This replaces the first `\n` with `\0` (null terminator).
 🔸 A **clean** way to strip trailing newline after `fgets()`.
+
+### ❓ What if there is **no** newline?
+
+If `\n` is **not found**, `strcspn` returns the **length of the string**.
+
+Then this happens:
+
+```c
+str[length_of_str] = '\0';
+```
+
+But the last character at `str[length_of_str]` is **already** `\0` — the string terminator.
+
+So you're just writing `\0` again in the same place. **No harm at all.** ✅ **Safe**.
 
 ---
 
-## ✨ Best Practice Reminders:
-| Tip                                | Why It Rocks                                                            |
-|------------------------------------|-------------------------------------------------------------------------|
+## ✨ Best Practice Reminders
+
+| Tip                                | Why It Rocks                                                           |
+| ---------------------------------- | ---------------------------------------------------------------------- |
 | Use `int ch` for `getchar()`       | Safely check `EOF` without overflow 🚫                                 |
-| Prefer `getchar()` loop            | Clean input buffer, portable, standard ✅                              |
-| Avoid `fflush(stdin)`              | Undefined behavior, unreliable ❌                                      |
+| Prefer `getchar()` loop            | Clean input buffer, portable, standard ✅                               |
+| Avoid `fflush(stdin)`              | Undefined behavior, unreliable ❌                                       |
 | Use `strcspn()` after `fgets()`    | Neatly strip the newline from input 🎯                                 |
 | Avoid `*ptr++ = *src++` if unclear | Use `*ptr = *src; ptr++; src++;` for readability (same performance) 🔍 |
 
 ---
 
-# CP9. Compound Literals 🍜
+# CP009. Compound Literals and Designated Initialization Notes
+
+---
+
+## Compound Literals 🍜
 
 Think of **compound literals** as the **instant noodles** of C programming — quick, convenient, and you don’t bother naming them. Just mix, use, done!🌟
 
-### Here's the idea:
+### 🎯 Example
+
 ```c
 struct Point {
     int x, y;
 };
 
-// Without compound literals
-struct Point p = {10, 20}; // You declare and name it
+// Without compound literals you declare and name it
+struct Point p;
+p.x = 10;
+p.y = 20;
 ```
 
 Now the compound literal magic:
+
 ```c
 // With compound literals — just like instant noodles 🍜
 struct Point p = (struct Point){10, 20};
@@ -1038,27 +1296,139 @@ No need to separately define a variable first — it's quick and direct.
 
 ---
 
-## Why They’re Awesome:
+## Designated or Normal or Standard Aggregate Initialization
 
-✅ Great for **temporary** or **one-time-use** objects  
-✅ Perfect for functions like `initialize()` where you might do:
+It's just like **compound literals** but works only during declaring a variable.
+
+### ✅ Example
+
 ```c
+struct Point {
+    int x, y;
+};
+
+// Standard Aggregate Initialization — just like instant noodles 🍜
+struct Point p = {10, 20};
+```
+
+---
+
+## Why They’re Awesome
+
+✅ Great for **temporary** or **one-time-use** objects
+✅ Perfect for functions like `initialize()` where you might do:
+
+```c
+typedef struct {
+    int day;
+    int month;
+    int year;
+} date;
+
 date d = (date){0}; // resets all fields to 0 instantly
+```
+
+As if you wrote:
+
+```c
+date d = { .day = 0, .month = 0, .year = 0 };
 ```
 
 Basically, **no-name, no-fuss structures** when you just need it *right now*.
 
 ---
 
-# ✍️ Cp 10. Formatted Output in C
+## 💡 Partial Initialization Behavior in C
+
+C initializes **in order** of declaration. Any **unspecified values** → get **set to 0**.
+
+So:
+
+```c
+date d = {a, b, c};
+```
+
+Just maps to:
+
+```c
+day = a;
+month = b;
+year = c;
+```
+
+### ✨ Example
+
+If you initialize only part of a struct, the rest is automatically set to `0`.
+
+```c
+typedef struct {
+    int day;
+    int month;
+    int year;
+} date;
+```
+
+| Code                     | Result                             |
+| ------------------------ | ---------------------------------- |
+| `date d = {0};`          | day = 0, month = 0, year = 0 ✅    |
+| `date d = {10};`         | day = 10, month = 0, year = 0 ✅   |
+| `date d = {10, 20};`     | day = 10, month = 20, year = 0 ✅  |
+| `date d = {10, 20, 30};` | day = 10, month = 20, year = 30 ✅ |
+
+Missing fields are filled with `0` — super handy and clean!
+
+---
+
+## ✅ Why Compound Literals Rock
+
+```c
+date d = {10, 10};                // ✅ Fine at declaration
+d = (date){11, 12};               // ✅ Reassignment using compound literal
+
+d = {11, 12};                     // ❌ Error: Not allowed outside declaration
+
+date *ptr = &(date){10, 20, 30};  // ✅ Creates a temporary unnamed struct and gives you its address
+
+&(date d = {10, 20, 30});         // ❌ Can't do this
+date d = &{10, 20, 30};           // ❌ Not allowed
+```
+
+Compound literals = **flexible**, **clean**, and **perfect for temporary needs** ✨
+
+---
+
+## ❓ `Compound Literals` vs `Aggregate Initialization`
+
+| Situation                      | Compound Literals | Aggregate Initialization |
+| ------------------------------ | ----------------- | ------------------------ |
+| At declaration                 | ✅ Valid          | ✅ Valid                |
+| After declaration (assignment) | ✅ Valid          | ❌ Not allowed          |
+| Temporary struct in function   | ✅ Very useful    | ❌ Not usable           |
+| Can take address of result     | ✅ Yes            | ❌ No                   |
+
+---
+
+## Summary
+
+| Syntax             | What it’s called             | Notes                                                 |
+| ------------------ | ---------------------------- | ----------------------------------------------------- |
+| `T var = { ... };` | **Aggregate Initialization** | Used for structs, arrays. Fields are filled in order. |
+| `(T){ ... }`       | **Compound Literal**         | Creates an **unnamed, temporary** struct or array     |
+
+---
+
+# ✍️ CP010. Formatted Output in C
+
 Welcome to a mini refresher on two cool I/O functions: `fprintf` & `snprintf`. Think of them as twins with different destinations — one writes to files, the other to strings.
 
 ---
 
 ## 📁 1. `fprintf()` — *Formatted Writing to a File*
+
 Just like `printf()` writes to your screen, `fprintf()` writes formatted text to a file (or any stream).
 
-### Syntax:
+### Syntax
+
 ```c
 fprintf(FILE *stream, const char *format, ...);
 ```
@@ -1067,7 +1437,8 @@ fprintf(FILE *stream, const char *format, ...);
 - `format`: Format string (e.g., `"Score: %d\n"`).
 - `...`: Values to fill into the format string.
 
-### ✅ Example:
+### ✅ Example
+
 ```c
 FILE *fptr = fopen("output.txt", "w");
 if (fptr) {
@@ -1077,7 +1448,8 @@ if (fptr) {
 ```
 
 📄 **Output inside `output.txt`:**
-```
+
+```text
 Hello, Dipsana! You scored 98 points.
 ```
 
@@ -1086,9 +1458,11 @@ Hello, Dipsana! You scored 98 points.
 ---
 
 ## 🧵 2. `snprintf()` — *Formatted Writing to a String*
+
 This function is used when you want to create a string in memory — kind of like building a message quietly without showing or saving it immediately.
 
-### Syntax:
+### ✅ Syntax
+
 ```c
 int snprintf(char *str, size_t size, const char *format, ...);
 ```
@@ -1101,6 +1475,7 @@ int snprintf(char *str, size_t size, const char *format, ...);
 ---
 
 ### ✅ Example 1: Store a Message in a String
+
 ```c
 char buffer[50];
 snprintf(buffer, sizeof(buffer), "Hello, %s! You scored %d points.", "Dipsana", 98);
@@ -1108,13 +1483,15 @@ printf("%s\n", buffer);
 ```
 
 🖥️ **Output:**
-```
+
+```text
 Hello, Dipsana! You scored 98 points.
 ```
 
 ---
 
 ### ✅ Example 2: Create Dynamic Filenames
+
 ```c
 int n = 5;
 char filename[20];
@@ -1133,7 +1510,7 @@ if (ptr) {
 
 ---
 
-## 🔁 Quick Comparison Table:
+## 🔁 Quick Comparison Table
 
 | 🧩 **Feature**        | 📝 **`fprintf`**                           | 🧵 **`snprintf`**                      |
 |------------------------|--------------------------------------------|-----------------------------------------|
@@ -1145,7 +1522,7 @@ if (ptr) {
 
 ---
 
-### 💡 Tip: `sprintf()` vs `snprintf()`
+## 💡 Bonus: `sprintf()` vs `snprintf()`
 
 - **`sprintf()`** is like `snprintf()` but **doesn't limit the size** — which means it can **overflow** if you're not careful.
   
@@ -1161,45 +1538,48 @@ snprintf(msg, sizeof(msg), "Hi %s, score: %d", "Dipsana", 98); // ✅ Safe
 ```
 
 > ✅ **Pro tip:** Always use `snprintf()` unless you *totally* control the output size.
+---
+
+# ✅ C011: Dynamic Memory, Stack vs Heap, and `void *` in C
 
 ---
 
-# C11. Let's Understand Dynamic Memory, Heap, Stack, and Void Pointer in C
+## 1. 🏗️ What is Dynamic Memory Allocation?
 
-## 🏗️ What is Dynamic Memory Allocation?
-- **Dynamic memory** means **allocating memory at runtime** (when the program is running).
-- It is useful when you **don't know** in advance how much memory you will need.
-- It **comes from the Heap**, **not Stack**.
+- Allocates **memory at runtime** (while program is running).
+- Useful when **memory size is unknown in advance**.
+- Comes from the **Heap**, not the Stack.
 
-| Allocation type | Timing       | Location |
-|:----------------|:-------------|:---------|
-| Static memory   | Compile-time | Stack    |
-| Dynamic memory  | Run-time     | Heap     |
-
----
-
-## 🗃️ Stack vs Heap Memory
-
-| Feature    | Stack                          | Heap                                           |
-|:-----------|:-------------------------------|:-----------------------------------------------|
-| Managed by | Compiler                       | Programmer (you!)                              |
-| Lifetime   | Automatic (ends with function) | Manual (you decide when to free)               |
-| Speed      | Fast                           | Slower                                         |
-| Size       | Limited                        | Much larger                                    |
-| Use case   | Local variables                | Dynamic memory (`malloc`, `calloc`, `realloc`) |
-| Risk       | Stack Overflow                 | Memory Leak                                    |
+| Allocation Type | Timing       | Memory Location |
+| --------------- | ------------ | --------------- |
+| Static          | Compile-time | Stack           |
+| Dynamic         | Run-time     | Heap            |
 
 ---
 
-## ⚙️ Functions to Allocate Dynamic Memory
-- **`malloc(size)`** → Allocates raw memory (random old garbage values inside).
-- **`calloc(num, size)`** → Allocates memory + fills it with zeros.
-- **`realloc(ptr, new_size)`** → Resizes previously allocated memory.
-- **`free(ptr)`** → Frees allocated memory, prevents memory leak.
+## 2. 🗃️ Stack vs Heap Memory
+
+| Feature    | Stack                          | Heap                          |
+| ---------- | ------------------------------ | ----------------------------- |
+| Managed by | Compiler                       | Programmer (You!)             |
+| Lifetime   | Automatic (ends with function) | Manual (you `free` it)        |
+| Speed      | Fast                           | Slower                        |
+| Size       | Limited                        | Larger                        |
+| Use case   | Local variables                | `malloc`, `calloc`, `realloc` |
+| Risk       | Stack Overflow                 | Memory Leak                   |
 
 ---
 
-## 📦 Example Quick View
+## 3. ⚙️ Dynamic Memory Functions
+
+| Function       | Description                            |
+| -------------- | -------------------------------------- |
+| `malloc(size)` | Allocates memory (garbage inside)      |
+| `calloc(n,s)`  | Allocates + zeroes memory              |
+| `realloc(p,s)` | Resizes previously allocated memory    |
+| `free(ptr)`    | Frees the memory, prevents memory leak |
+
+### 🧪 Quick Example
 
 ```c
 // malloc example
@@ -1218,65 +1598,86 @@ free(q);
 
 ---
 
-## 🌀 What's the deal with `void *` and `*`?
+## 4. 🌀 `void *` and the Magic of `*`
 
-- `malloc()`, `calloc()`, `realloc()` return a **`void *`**, which is a **generic pointer**.
-- `void *` means **pointer to something**, but **type unknown**.
-- You **must cast** it into a proper type, like `int*`, `float*`, etc.
+### 🔹 What is `void *`?
 
-  ```c
-  int *p = (int *)malloc(5 * sizeof(int));  // cast void* to int*
-  ```
+- A **generic pointer** returned by `malloc`, `calloc`, `realloc`.
+- Holds the **address of any type**, but **type unknown**.
 
----
+```c
+int *p = (int *)malloc(5 * sizeof(int));  // cast to int*
+```
 
-🌟 Why the `*` (star)?
-======================
-- `*` means **pointer**.
-- `int *p` means "**p is a pointer to an int**."
-- `malloc()` gives you an **address** → you need a **pointer** to hold that address.
+### 🔹 What does `*` mean?
 
-Think like:  
-→ **Without `*`**, you'd be trying to store an address in a normal variable = ❌ error.
+- `*` = pointer to something.
+- `int *p` → p holds the **address of an `int`**.
+
+📌 `malloc` gives you an **address** → You need `*` to **store that address** correctly.
 
 ---
 
-🥰 One-line memory in your mind:
-================================
-> `malloc` gives you a **memory address**, 
-> `*` lets you **store that address** correctly.
+## 5. ⚖️ Safe and Smart Allocation
+
+### 🔍 Common mistake
+
+```c
+int *arr = malloc(n * sizeof(int)); // If you change arr’s type, you might forget this.
+```
+
+### ✅ Better way
+
+```c
+int *arr = malloc(n * sizeof(*arr)); // Safer!
+```
+
+> “Allocate space for `n` items of whatever type `arr` points to.”
+
+🎯 Cleaner and **type-safe** even for `float`, `char`, `struct`, etc.
+
+#### Example
+
+```c
+float *scores = malloc(n * sizeof(*scores));
+```
 
 ---
 
-## 🚪 Exiting the Program (exit)
+## 6. 🚪 `exit()` – End the Program
 
-- `exit(0);` → Program ended **successfully** (no error).
-- `exit(1);` → Program ended **with an error** (like memory allocation failed).
-- ❗ **No matter where you call `exit(0);` or `exit(1);`,** it **immediately stops** the whole program.
-- You can think of `exit()` like pulling the power plug — everything halts, no looking back.
-
----
-
-## ❗ Important Points
-- Always `free()` what you `malloc()`, `calloc()`, or `realloc()`.
-- If you forget `free()`, memory will stay occupied = **memory leak**.
-- `malloc()`, `calloc()`, `realloc()` return `NULL` if they fail.
+- `exit(0);` → Ends successfully.
+- `exit(1);` → Ends with error.
+- Wherever called, it **immediately halts** program execution.
 
 ---
 
-# 🔥 In short:
-**Stack** = fast, automatic, temporary 💨  
-**Heap** = manual, dynamic, flexible 🧩  
-**void \*** = memory address without knowing what type it is 🎯  
-**\*** = holds addresses, not normal values! 💾
+## 7. 🧼 Don't Forget `free()`
+
+- Always `free()` what you `malloc()` / `calloc()` / `realloc()`.
+- Else → memory stays occupied = **Memory Leak**.
+- All these functions return `NULL` if allocation fails.
 
 ---
 
-# PC2. Tips:
+## 🔥 TL;DR Summary
+
+| Concept     | Meaning                                            |
+| ----------- | -------------------------------------------------- |
+| **Stack**   | Fast, automatic, small, temporary 💨               |
+| **Heap**    | Manual, big, flexible, slower 🧩                   |
+| **void \*** | Generic pointer – "I hold an address!" 🎯          |
+| **\***      | Used to declare/store pointers (memory address) 💾 |
+| **free()**  | Mandatory after dynamic allocation 💣              |
 
 ---
 
-## 💡 Tip 1:
+# PC002. Tips
+
+---
+
+## 💡 Tip 1
+
 ```c
 char moves[] = {'r', 'p', 's'};
 char comp = moves[rand() % 3];
@@ -1294,19 +1695,17 @@ char comp = "rps"[rand() % 3];
 
 ---
 
-## 💡 Tip 2:
+## 💡 Tip 2
 
 **Avoid recursion** for *continue-or-stop* programs — **use loops instead**!
 
 Why?
 
 | 🚫 Recursion                     | ✅ Loops                          |
-|----------------------------------|------------------------------------|
+| -------------------------------- | ---------------------------------- |
 | Eats stack memory 💾             | Constant memory usage 🔁          |
 | Risk of crash with long use 💥   | Safe for millions of runs 🛡️      |
 | Harder to trace/debug 🧩         | Clear, linear flow 📜             |
 
 ➔ Recursion is **overkill** for simple input-based logic.  
 ➔ Use it only for **tiny programs**, **demos**, or **code golf** fun!
-
----
