@@ -1,15 +1,15 @@
-// C11. Use realloc to increase and decrease an array's length.
+// C11.6. Use realloc to increase and decrease an array's length.
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int main()
 { 
     // Init: Dynamic array of size 5
-    size_t len = 5;
-    int *arr = (int *)malloc(len * sizeof(int));
+    int *arr = (int *)malloc(5 * sizeof(int));
     
     puts("\nInitial values:");
-    for (size_t i = 0; i < len; i++)
+    for (size_t i = 0; i < 5; i++)
     {
         arr[i] = (int)(i + 1) * 10;  // Sample data: 10, 20, 30, 40, 50
         printf("Element |%zu|: %d\n", i + 1, arr[i]);

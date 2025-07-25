@@ -1,4 +1,5 @@
-// C11. Use realloc to increase and decrease an array's length
+// C11.7. Use realloc to increase and decrease an array's length. If space is insufficient, memory allocation fails and a null pointer is returned.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -13,8 +14,7 @@ int main()
     printf("\nHow many integers you want to store?: ");
     scanf("%zu", &len);
     
-    size_t int_size = sizeof(int);
-    int *arr = (int *)malloc(len * int_size);
+    int *arr = (int *)malloc(len * sizeof(*arr));
     memFail(arr);
 
     printf("\nEnter %zu element%s one by one\n", len, (len > 1 ? "s" : ""));
@@ -28,7 +28,7 @@ int main()
     scanf("%zu", &newLen);
 
     newLen += len;
-    arr = realloc(arr, newLen * int_size);
+    arr = realloc(arr, newLen * sizeof(*arr));
     memFail(arr);
 
     printf("\nEnter %zu more element%s one by one\n", newLen - len, (newLen - len > 1 ? "s" : ""));
@@ -42,7 +42,7 @@ int main()
     scanf("%zu", &shrinkLen);
 
     newLen -= shrinkLen;
-    arr = realloc(arr, newLen * int_size);
+    arr = realloc(arr, newLen * sizeof(*arr));
     memFail(arr);
 
     puts("\nStored values after decrease:");

@@ -1,4 +1,5 @@
-// CP11. Store 5 elements in an array and now use realloc so that it can store 10 integers
+// CP11.6. Store 5 elements in an array and now use realloc so that it can store 10 integers
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,9 +9,8 @@ void memFail(int *arr);
 int main()
 { 
     size_t len = 5; // Start with 5 elements
-    size_t int_size = sizeof(int);
     
-    int *arr = (int *)malloc(len * int_size); // Init: Dynamic Array
+    int *arr = (int *)malloc(len * sizeof(*arr)); // Init: Dynamic Array
     memFail(arr);
     
     printf("\nEnter %zu element%s one by one\n", len, (len > 1 ? "s" : ""));
@@ -28,10 +28,10 @@ int main()
     
     // Increase array to 10 elements
     size_t newLen = 10;
-    arr = realloc(arr, newLen * int_size); // Reallocate memory for increase
+    arr = realloc(arr, newLen * sizeof(*arr)); // Reallocate memory for increase
     memFail(arr);
     
-    printf("\nEnter %zu more element%s one by one\n", newLen - len, (newLen - len > 1 ? "s" : ""));
+    printf("\nEnter %zu more element%s\n", newLen - len, (newLen - len > 1 ? "s one by one" : ""));
     for (size_t i = len; i < newLen; i++)
     {
         printf("Enter element |%3zu|: ", i + 1);

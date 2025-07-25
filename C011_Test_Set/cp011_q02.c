@@ -1,4 +1,5 @@
-// CP11. Dynamically create an array capable of storing 6 integers.
+// CP11.2. Dynamically create an array capable of storing 6 integers.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,7 +9,7 @@ void clearBuffer();
 int main()
 {
     // Init: 6 size array
-    int *arr = (int *) calloc(6, sizeof(int));
+    int *arr = (int *) calloc(6, sizeof(*arr));
     
     // Check for memory allocation failure
     if (arr == NULL)

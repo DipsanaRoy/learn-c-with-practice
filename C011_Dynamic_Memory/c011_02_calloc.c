@@ -1,4 +1,5 @@
-// C11. Default initialization value of calloc is 0. If space is insufficient, memory allocation fails and a null pointer is returned.
+// C11.2. Default initialization value of calloc is 0.
+
 #include <stdio.h>
 #include <stdlib.h>
 
