@@ -1,4 +1,5 @@
-// CP10. Here's another way of doing it:
+// CP10.1c. Here's another way of doing it:
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -34,8 +35,7 @@ int main()
             int num = atoi(token); // converts alphabets to int
             printf("Found number: %d\n", num);
         }
-        else
-            printf("Found text: %s\n", token);
+        else printf("Found text: %s\n", token);
     }
     fclose(fptr);
     return 0;

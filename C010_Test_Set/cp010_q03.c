@@ -1,4 +1,5 @@
-// CP10. Read a text file character-wise from user and write its content twice in a separate file.
+// CP10.3. Read a text file character-wise from user and write its content twice in a separate file.
+
 #include <stdio.h>
 
 int main()

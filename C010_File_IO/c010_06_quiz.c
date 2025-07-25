@@ -1,4 +1,4 @@
-// C10. Quick Quiz
+// C10.6. Quick Quiz
 #include <stdio.h>
 #include <errno.h>
 

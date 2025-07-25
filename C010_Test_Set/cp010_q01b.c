@@ -1,4 +1,5 @@
-// CP10. Here's another way of doing it, the hard way:
+// CP10.1b. Here's another way of doing it, the hard way:
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h> // You can use isalpha and isdigit functions from here

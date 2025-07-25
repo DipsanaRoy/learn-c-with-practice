@@ -1,4 +1,5 @@
-// C10. Check if the files were opened successfully.
+// C10.2. Check if the files were opened successfully.
+
 #include <stdio.h>
 
 int main()

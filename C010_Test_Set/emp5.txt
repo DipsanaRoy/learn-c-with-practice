@@ -1,0 +1,16 @@
+'5' employee details are:
+
+Employee 1 name: Dimple
+Employee 1 salary: 50000
+
+Employee 2 name: Chintu
+Employee 2 salary: 45000
+
+Employee 3 name: Verma
+Employee 3 salary: 40000
+
+Employee 4 name: Sita
+Employee 4 salary: 60000
+
+Employee 5 name: Raman
+Employee 5 salary: 55000

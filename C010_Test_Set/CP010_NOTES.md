@@ -1,15 +1,15 @@
+# ✍️ CP010. Formatted Output in C
 
----
-
-# ✍️ Cp 10. Formatted Output in C
 Welcome to a mini refresher on two cool I/O functions: `fprintf` & `snprintf`. Think of them as twins with different destinations — one writes to files, the other to strings.
 
 ---
 
 ## 📁 1. `fprintf()` — *Formatted Writing to a File*
+
 Just like `printf()` writes to your screen, `fprintf()` writes formatted text to a file (or any stream).
 
-### Syntax:
+### Syntax
+
 ```c
 fprintf(FILE *stream, const char *format, ...);
 ```
@@ -18,7 +18,8 @@ fprintf(FILE *stream, const char *format, ...);
 - `format`: Format string (e.g., `"Score: %d\n"`).
 - `...`: Values to fill into the format string.
 
-### ✅ Example:
+### ✅ Example
+
 ```c
 FILE *fptr = fopen("output.txt", "w");
 if (fptr) {
@@ -28,7 +29,8 @@ if (fptr) {
 ```
 
 📄 **Output inside `output.txt`:**
-```
+
+```text
 Hello, Dipsana! You scored 98 points.
 ```
 
@@ -37,9 +39,11 @@ Hello, Dipsana! You scored 98 points.
 ---
 
 ## 🧵 2. `snprintf()` — *Formatted Writing to a String*
+
 This function is used when you want to create a string in memory — kind of like building a message quietly without showing or saving it immediately.
 
-### Syntax:
+### ✅ Syntax
+
 ```c
 int snprintf(char *str, size_t size, const char *format, ...);
 ```
@@ -52,6 +56,7 @@ int snprintf(char *str, size_t size, const char *format, ...);
 ---
 
 ### ✅ Example 1: Store a Message in a String
+
 ```c
 char buffer[50];
 snprintf(buffer, sizeof(buffer), "Hello, %s! You scored %d points.", "Dipsana", 98);
@@ -59,13 +64,15 @@ printf("%s\n", buffer);
 ```
 
 🖥️ **Output:**
-```
+
+```text
 Hello, Dipsana! You scored 98 points.
 ```
 
 ---
 
 ### ✅ Example 2: Create Dynamic Filenames
+
 ```c
 int n = 5;
 char filename[20];
@@ -84,7 +91,7 @@ if (ptr) {
 
 ---
 
-## 🔁 Quick Comparison Table:
+## 🔁 Quick Comparison Table
 
 | 🧩 **Feature**        | 📝 **`fprintf`**                           | 🧵 **`snprintf`**                      |
 |------------------------|--------------------------------------------|-----------------------------------------|
@@ -96,7 +103,7 @@ if (ptr) {
 
 ---
 
-### 💡 Tip: `sprintf()` vs `snprintf()`
+## 💡 Bonus: `sprintf()` vs `snprintf()`
 
 - **`sprintf()`** is like `snprintf()` but **doesn't limit the size** — which means it can **overflow** if you're not careful.
   
@@ -112,5 +119,3 @@ snprintf(msg, sizeof(msg), "Hi %s, score: %d", "Dipsana", 98); // ✅ Safe
 ```
 
 > ✅ **Pro tip:** Always use `snprintf()` unless you *totally* control the output size.
-
----

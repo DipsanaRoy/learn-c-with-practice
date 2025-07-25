@@ -1,18 +1,17 @@
-// CP10. Modify integers containing file to double their value.
+// CP10.6. Modify integers containing file to double their value.
+
 #include <stdio.h>
 
 int main()
 {
-    FILE *fptr; // File pointer
-    
     // Open & validate file || R
-    fptr = fopen("numbers.txt", "r");
+    FILE *fptr = fopen("numbers.txt", "r");
     if (fptr == NULL)
     {
         puts("\nFailed to open the file.");
         return 1;
     }
-    
+
     // Open & validate temp file || R
     FILE *temp = fopen("temp.txt", "w");
     if (temp == NULL)
@@ -21,7 +20,7 @@ int main()
         fclose(fptr);
         return 1;
     }
-    
+
     // Store doubled values to "temp.txt"
     int num;
     while (fscanf(fptr, "%d", &num) == 1)

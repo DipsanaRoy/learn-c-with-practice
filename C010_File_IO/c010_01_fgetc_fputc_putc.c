@@ -1,4 +1,5 @@
-// C10. 'fgetc' and 'fputc' demonstration.
+// C10.1. 'fgetc', 'fputc' and 'putc' demonstration.
+
 #include <stdio.h>
 
 int main()
@@ -10,8 +11,8 @@ int main()
     ptr = fopen("demo.txt", "w");
 
     // Put characters in the file
-    putc('H', ptr);
-    putc('i', ptr);
+    putc('H', ptr);  // Valid ✔️ - faster (macro)
+    fputc('i', ptr); // Also valid ✔️ - slower (function)
     putc('!', ptr);
     putc(' ', ptr);
     putc('0', ptr);
@@ -26,7 +27,7 @@ int main()
     char c = fgetc(ptr); // get first character from the file
     printf("\nFirst character from the file: %c\n", c);
 
-    puts("Printing file contents character-wise");
+    puts("\nRest of the file contents character-wise:");
     for (size_t i = 0; i < 5; i++)
     {
         printf("%c\n", fgetc(ptr));

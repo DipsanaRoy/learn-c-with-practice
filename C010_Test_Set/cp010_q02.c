@@ -1,12 +1,13 @@
-// CP10. Generate multiplication table of a given number in text format. Ensure the readability and formatting of the file.
-#include<stdio.h>
+// CP10.2. Generate multiplication table of a given number in text format. Ensure the readability and formatting of the file.
+
+#include <stdio.h>
 
 int main()
 {
     // Init: File Pointer
     FILE *ptr;
-    
-    // I/p: Number from user
+
+    // User I/p: Number
     int num;
     printf("\nWhose multiplication table you want to store?: ");
     scanf("%d", &num);

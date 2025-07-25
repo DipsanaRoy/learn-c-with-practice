@@ -1,4 +1,5 @@
-// CP10. Read three integers from a file
+// CP10.1a. Read three integers from a file
+
 #include <stdio.h>
 
 int main()

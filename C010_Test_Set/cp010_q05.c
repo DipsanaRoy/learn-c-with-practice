@@ -1,4 +1,5 @@
-// CP10. Modify an integer containing file to double its value.
+// CP10.5. Modify an integer containing file to double its value.
+
 #include <stdio.h>
 
 int main()

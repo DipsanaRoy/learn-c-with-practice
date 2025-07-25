@@ -1,4 +1,5 @@
-// C10. Read two numbers from a file
+// C10.4. Read two numbers from a file
+
 #include <stdio.h>
 
 int main()
