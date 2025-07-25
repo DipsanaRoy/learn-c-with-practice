@@ -1,4 +1,5 @@
-// CP9. Illustrate the use of arrow operator in C
+// CP9.4a. Illustrate the use of arrow operator in C
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
@@ -15,7 +16,7 @@ void changeMarks(student *s);
 
 int main()
 {
-    // Initialize: student 1
+    // Init: student 1
     student s;
     student *s1 = &s;
 

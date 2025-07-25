@@ -1,4 +1,5 @@
-// CP9. Write a structure capable of storing time. Write a function to compare 2 times.
+// CP9.10. Write a structure capable of storing time and a function to compare 2 times (The interviewer might intentionally ask blurry questions).
+
 #include <stdio.h>
 
 typedef struct store_time
@@ -38,33 +39,21 @@ int compareTime(time t1, time t2)
 {
     // Hour comparison
     if (t1.hour > t2.hour)
-    {
         return 1;
-    }
-    else if (t1.hour < t2.hour)
-    {
+    if (t1.hour < t2.hour)
         return -1;
-    }
 
     // Minute comparison
     if (t1.min > t2.min)
-    {
         return 1;
-    }
-    else if (t1.min < t2.min)
-    {
+    if (t1.min < t2.min)
         return -1;
-    }
 
     // Second comparison
     if (t1.sec > t2.sec)
-    {
         return 1;
-    }
-    else if (t1.sec < t2.sec)
-    {
+    if (t1.sec < t2.sec)
         return -1;
-    }
 
     return 0;
 }

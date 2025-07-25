@@ -1,4 +1,5 @@
-// CP9. Structure capable of storing date to compare them.
+// CP9.9. Structure capable of storing date to compare them.
+
 #include <stdio.h>
 #include <string.h>
 

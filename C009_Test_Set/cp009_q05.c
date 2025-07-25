@@ -1,4 +1,5 @@
-// CP9. Add two complex numbers
+// CP9.5. Add two complex numbers
+
 #include <stdio.h>
 
 // Structure: complex number

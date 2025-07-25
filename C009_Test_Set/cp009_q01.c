@@ -1,9 +1,9 @@
-// CP9. Create a two dimensional vector using structures
+// CP9.1. Create a two dimensional vector using structures
+
 #include<stdio.h>
 
 // 2d Structure
-typedef struct vector2d
-{
+typedef struct vector2d {
     float x; // X dimension
     float y; // Y dimension
 } vect2d;

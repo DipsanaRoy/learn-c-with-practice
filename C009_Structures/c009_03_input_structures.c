@@ -1,4 +1,5 @@
-// C9. Store 3 employee details from user defined data using structures.
+// C9.3. Store 3 employee details from user defined data using structures.
+
 #include <stdio.h>
 #include <string.h>
 
@@ -24,7 +25,7 @@ int main()
     printf("Enter Employee |1| salary: ");
     scanf("%10f", &e1.salary); // Likewise limit the input to 10 characters
 
-    for (int c; c != '\n' && c != EOF; c = getchar()); // Clear input buffer
+    for (int c = getchar(); c != '\n' && c != EOF; c = getchar()); // Clear input buffer
 
     // I/p: e2
     printf("\nEnter Employee |2| name: ");
@@ -36,7 +37,7 @@ int main()
     printf("Enter Employee |2| salary: ");
     scanf("%10f", &e2.salary);
 
-    for (int c; c != '\n' && c != EOF; c = getchar()); // Clear input buffer
+    for (int c = getchar(); c != '\n' && c != EOF; c = getchar()); // Clear input buffer
 
     // I/p: e3
     printf("\nEnter Employee |3| name: ");

@@ -16,13 +16,13 @@ int main()
     // Init: v, u from vect2d
     vect2d v, u;
 
-    // I/p Vector v
+    // I/p: Vector v
     printf("\nEnter x dimension of |Vector 1|: ");
     scanf("%f", &v.x);
     printf("Enter y dimension of |Vector 1|: ");
     scanf("%f", &v.y);
 
-    // I/p Vector u
+    // I/p: Vector u
     printf("\nEnter x dimension of |Vector 2|: ");
     scanf("%f", &u.x);
     printf("Enter y dimension of |Vector 2|: ");

@@ -1,4 +1,4 @@
-// CP9. User-defined 5 complex numbers structure & display them
+// CP9.6+7. User-defined 5 complex numbers structure & display them
 #include <stdio.h>
 
 // Structure: Complex No.

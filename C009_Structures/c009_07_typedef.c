@@ -1,4 +1,5 @@
-// C9. typedef keyword
+// C9.7. typedef keyword
+
 #include <stdio.h>
 #include <string.h>
 

@@ -1,4 +1,5 @@
-// CP9. Represent a back account of a customer and display it.
+// CP9.8. Represent a back account of a customer and display it.
+
 #include <stdio.h>
 #include <string.h>
 
@@ -16,12 +17,12 @@ bAcc display(int i, bAcc acc);
 
 int main()
 {
-    bAcc acc[100]; // Declare: acc numbers
-    size_t n;      // store bank accounts no.s
-
     // I/p: no. of bank acc
+    size_t n; // store bank accounts no.s
     printf("\nHow many bank accounts you want to enter?: ");
     scanf("%zu", &n);
+
+    bAcc acc[n]; // Declare: acc numbers
 
     // I/p: bank acc
     for (size_t i = 0; i < n; i++)

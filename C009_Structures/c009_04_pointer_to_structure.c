@@ -1,4 +1,5 @@
-// C9. Pointers to structures
+// C9.4. Pointers to structures
+
 #include <stdio.h>
 #include <string.h>
 

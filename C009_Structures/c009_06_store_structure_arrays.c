@@ -1,4 +1,5 @@
-// C9. Store 3 employee details from user-defined data using structures
+// C9.6. Store 3 employee details from user-defined data using structures
+
 #include <stdio.h>
 #include <string.h>
 

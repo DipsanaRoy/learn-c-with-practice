@@ -1,4 +1,5 @@
-// C9. Initialize structures in C
+// C9.1. Initialize structures in C
+
 #include <stdio.h>
 #include <string.h>
 
