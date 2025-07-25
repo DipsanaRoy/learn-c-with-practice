@@ -1,4 +1,5 @@
-// C8. Let's trim a String in C. Why unsigned char? Read: c8_string_notes.md
+// C8.11. Let's trim a String in C. Why unsigned char? Read: c8_string_notes.md
+
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>

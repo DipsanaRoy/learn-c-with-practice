@@ -1,4 +1,5 @@
-// CP8. Write your own version of strcpy from <string.h>
+// CP8.5. Write your own version of strcpy from <string.h>
+
 #include <stdio.h>
 #include <string.h>
 
@@ -13,7 +14,7 @@ int main()
     printf("\nEnter a target String: ");
     fgets(target, sizeof(target), stdin);
 
-    printf("\nEnter a String to merged with the target: ");
+    printf("\nEnter a String to be copied: ");
     fgets(source, sizeof(source), stdin);
 
     // Remove '\n' from input strings

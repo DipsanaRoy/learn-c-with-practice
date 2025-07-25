@@ -1,4 +1,5 @@
-// CP8. Create a slice function from string.h to mimic its function.
+// CP8.4. Create a slice function from string.h to mimic its function.
+
 #include <stdio.h>
 #include <string.h>
 
@@ -15,15 +16,15 @@ int main()
     printf("\nEnter a string: ");
     scanf("%[^\n]", st);
 
-    printf("\nEnter slice start: ");
+    printf("Enter slice start: ");
     scanf("%zu", &start);
-    printf("\nEnter slice end: ");
+    printf("Enter slice end: ");
     scanf("%zu", &end);
 
     if (start > end || end > strlen(st))
     {
         puts("Invalid range.");
-        return;
+        return -1;
     }
     slice(st, start, end); // Function Call
 

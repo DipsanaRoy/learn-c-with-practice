@@ -1,4 +1,5 @@
 // CP8. Concatenate two Strings by custom 'strcat'.
+
 #include <stdio.h>
 #include <string.h>
 

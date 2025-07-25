@@ -1,4 +1,5 @@
-// C8. Print a string
+// C8.4. Print a string
+
 #include <stdio.h>
 
 int main() {

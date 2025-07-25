@@ -1,4 +1,5 @@
-// C8. Copy a String
+// C8.10. Copy a String
+
 #include <stdio.h>
 #include <string.h>
 

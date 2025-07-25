@@ -1,4 +1,5 @@
-// C8. strlen() alternative
+// C8.2. strlen() alternative
+
 #include <stdio.h>
 
 // Function Prototype

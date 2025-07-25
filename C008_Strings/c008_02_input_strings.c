@@ -1,5 +1,6 @@
-// C8. Input strings
-#include<stdio.h>
+// C8.2. Input strings
+
+#include <stdio.h>
 
 int main()
 {
@@ -9,7 +10,7 @@ int main()
     printf("\nWhat's your full name?: ");
     scanf("%[^\n]", name);
     printf("Your full name is %s!\n", name);
-    
+
     // `%s` -> reads a characters sequence till whitespace (like spaces, tabs, or newlines)
     printf("\nWhat's your full name again?: ");
     scanf("%s", name);

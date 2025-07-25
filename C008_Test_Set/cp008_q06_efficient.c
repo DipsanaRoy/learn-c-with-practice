@@ -1,4 +1,5 @@
-// CP8. Encrypt a string by adding 1 to the ASCII value of its characters efficiently.
+// CP8.6. Encrypt a string by adding 1 to the ASCII value of its characters efficiently
+
 #include<stdio.h>
 #include<string.h>
 
@@ -7,7 +8,7 @@ void encrypt(char *st);
 
 int main()
 {
-    // I/p: String
+    // User I/p: String
     char st[100];
     printf("\nEnter a string: ");
     scanf("%[^\n]", st);

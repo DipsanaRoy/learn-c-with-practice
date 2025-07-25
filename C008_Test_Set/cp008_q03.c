@@ -1,4 +1,5 @@
-// CP8. Write your own version of strlen function from <string.h>
+// CP8.3. Write your own version of strlen function from <string.h>
+
 #include <stdio.h>
 
 // Function Prototype

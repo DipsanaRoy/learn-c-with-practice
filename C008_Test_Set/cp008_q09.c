@@ -1,4 +1,5 @@
-// CP8. Check whether a given character is present in a string
+// CP8.9. Check whether a given character is present in a string
+
 #include <stdio.h>
 
 // Function Prototype

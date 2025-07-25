@@ -1,4 +1,5 @@
-// CP8. Count the occurrence of a given character in a String
+// CP8.8. Count the occurrence of a given character in a String
+
 #include <stdio.h>
 
 // Function Prototype

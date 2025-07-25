@@ -1,4 +1,5 @@
-// CP8. Decrypt the string using encrypt function in problem 6
+// CP8.7. Decrypt the string using encrypt function in problem 6
+
 #include <stdio.h>
 #include <string.h>
 

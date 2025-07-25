@@ -1,4 +1,5 @@
-// C8. Print length of String
+// C8.6. Print length of String
+
 #include<stdio.h>
 #include<string.h>
 

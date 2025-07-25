@@ -1,7 +1,4 @@
-
----
-
-# C8. String Notes in C
+# C008. String Notes in C
 
 ---
 
@@ -17,16 +14,20 @@
 ## 2. 🧵 String Input in C – The Safe Way
 
 ### 🚫 Avoid This: `gets(name);`
+
 ```c
 gets(name);
 ```
+
 - **Problem**: It **doesn’t check** buffer size.
 - **Risk**: **Buffer Overflow** → leads to **memory corruption**.
 
 ### ✅ Use This Instead: `fgets(name, sizeof(name), stdin);`
+
 ```c
 fgets(name, sizeof(name), stdin);
 ```
+
 | Part             | Meaning                             |
 |------------------|-------------------------------------|
 | name             | Where input is stored               |
@@ -42,6 +43,7 @@ fgets(name, sizeof(name), stdin);
 ```c
 while (isspace((unsigned char)ch))
 ```
+
 - Checks if a character is **space**, **tab**, or **newline**.
 - ✅ Cast to `unsigned char` to prevent problems on systems where `char` is signed.
 
@@ -49,7 +51,8 @@ while (isspace((unsigned char)ch))
 
 ## 4. 🔡 `tolower()` and `toupper()` in C
 
-### ✨ Usage:
+### ✨ Usage
+
 - `tolower(c)` → Converts uppercase to lowercase.
 - `toupper(c)` → Converts lowercase to uppercase.
 - If already the correct case → **no change**.
@@ -58,6 +61,7 @@ while (isspace((unsigned char)ch))
 char ch = 'A';
 ch = tolower(ch); // Now ch is 'a'
 ```
+
 ✅ Always **assign back** if you want to **keep the change**.
 
 ---
@@ -75,7 +79,8 @@ ch = tolower(ch); // Now ch is 'a'
   - User presses `Ctrl+D` (Linux/macOS) or `Ctrl+Z` (Windows).
   - Input error occurs (rare).
 
-#### Example:
+#### Example
+
 ```c
 int ch = getchar();
 if (ch == '\n')
@@ -95,6 +100,7 @@ else
 ```c
 putchar('A'); // Prints A
 ```
+
 - Simple and fast way to print small outputs.
 
 ---
@@ -102,6 +108,7 @@ putchar('A'); // Prints A
 ## 6. 🚨 EOF Handling Tip
 
 If you really want to **check for bad input**:
+
 - Always store `getchar()` result into an `int`.
 - Check if it's `EOF` before processing.
 - Clear buffer properly if needed (we'll discuss more in `cp8_notes.md`).
@@ -124,5 +131,3 @@ if (ch == 'y')
 else if (ch == 'n')
     printf("You said no!\n");
 ```
-
----

@@ -1,4 +1,5 @@
-// CP8. Encrypt a string by adding 1 to the ASCII value of its characters
+// CP8.6. Encrypt a string by adding 1 to the ASCII value of its characters
+
 #include<stdio.h>
 #include<string.h>
 
@@ -10,10 +11,10 @@ int main()
     scanf("%[^\n]", st);
     printf("\nOriginal string: %s\n", st);
 
-    int len = strlen(st); // String length
+    size_t len = strlen(st); // String length
 
-    // Encrypting string by +1
-    for (int i = 0; i < len; i++)
+    // Encrypt string by +1
+    for (size_t i = 0; i < len; i++)
     {
         st[i] = (char)(((int)st[i]) + 1);
     }

@@ -1,4 +1,5 @@
-// CP8. Take strings as user inputs via %c and %s with equality confirmation.
+// CP8.2. Take strings as user inputs via %c and %s with equality confirmation.
+
 #include <stdio.h>
 #include <string.h>
 
