@@ -1,4 +1,5 @@
-// C7. Meaningful Pointer Operations (Visualizing Pointer Arithmetic)
+// C7.9. Meaningful Pointer Operations (Visualizing Pointer Arithmetic)
+
 #include <stdio.h>
 #include <stdint.h>
 

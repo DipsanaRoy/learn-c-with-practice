@@ -1,4 +1,4 @@
-/* C7. Enter and display student subject-wise marks.
+/* C7.7. Enter and display student subject-wise marks.
     
     3d, 4d and more complex arrays are possible but aren't used as such.
     

@@ -1,11 +1,8 @@
+# CP007. Pointer and Loops Dilemma
 
 ---
 
-# CP7. Pointer and Loops Dilemma
-
----
-
-## 1. 📌 Pointer Trivia — A Pointer Has Its Own Address!
+## 1. 📌 Pointer Trivia — A Pointer Has Its Own Address
 
 - `ptr` holds an address → `int *ptr = &arr[0];`
 - `&ptr` is the pointer’s own address.
@@ -22,7 +19,7 @@ int main() {
 }
 ```
 
-### Sample Output:
+### Sample Output
 
 ptr (points to arr[0]) = 0x7ffeefbff4b0
 &ptr (address of ptr)  = 0x7ffeefbff4b8
@@ -52,7 +49,7 @@ Let’s solve this with a fun **peon analogy** 😄
 
 ### 🤖 The Peon Analogy
 
-#### 📦 `int i;` outside the loop:
+#### 📦 `int i;` outside the loop
 
 > 🧑‍🏭 Think of a **permanent peon** sitting at a far-away desk.  
 > Every time you run a loop, you're like:  
@@ -64,14 +61,16 @@ Let’s solve this with a fun **peon analogy** 😄
 
 ---
 
-#### ⚡ `int i = 0;` inside the loop:
+#### ⚡ `int i = 0;` inside the loop
 
 > 🎯 This time, it's like hiring a **temporary peon** right where the work happens:  
 > "Hey you! I have a small task — start from 0, finish it, and leave."
 
 - The variable is created *right next to the loop*, making it **more local and faster to reach**.
 - The compiler treats it like:  
+
 > *"Cool, it's right here. I can optimize this and reuse registers smartly!"*
+
 - Cleaner and avoids unintended reuse across unrelated loops.
 
 ---
@@ -102,5 +101,3 @@ Let’s solve this with a fun **peon analogy** 😄
 ---
 
 > Written by someone who once believed the peon got tired running back and forth too much.
-
----

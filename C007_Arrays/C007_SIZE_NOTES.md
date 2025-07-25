@@ -1,7 +1,4 @@
-
----
-
-# C7. C Size Notes
+# C007. C Size Notes
 
 ---
 
@@ -12,11 +9,13 @@
 | `%d`             | `int`          | ✅ Yes            | ❌ No               |
 | `%u`             | `unsigned int` | ❌ No             | ✅ Yes (conversion) |
 
-### When to Use:
+### When to Use
+
 - Use `%d` if output is always non-negative → **faster and simpler**.
 - Use `%u` only when you're specifically dealing with `unsigned int`.
 
-### Example:
+### Example
+
 ```c
 int result = 100;
 printf("%d\n", result); // Simpler and faster
@@ -30,12 +29,14 @@ printf("%d\n", result); // Simpler and faster
 - **Retrieves the size** of different data types and variables **based on your architecture**.
 
 ### Use Case?
+
 - Perform **size-related operations** like *storing length of an array.*
+
 ```c
 size_t length = sizeof(arr) / sizeof(arr[0]); // arr length = total arr size / each element size
 ```
 
-#### Example: `sizeof(int), sizeof(float)`, etc.
+#### Example: `sizeof(int), sizeof(float)`, etc
 
 ---
 
@@ -45,7 +46,8 @@ size_t length = sizeof(arr) / sizeof(arr[0]); // arr length = total arr size / e
 - You can't have -5 toys, right? That's why **it can’t be negative**.
 - The computer uses it to **know how big something is**, or **how many times** to do something safely (especially in loops, arrays, and memory management).
 
-### 👩‍💻 Behind the Scenes:
+### 👩‍💻 Behind the Scenes
+
 - `size_t` is an **unsigned data type** that stores **size values in bytes**.
 - It is the **return type of `sizeof`** and used in functions like `malloc()`, `strlen()`, etc.
 - It is **defined in**:
@@ -101,6 +103,7 @@ int main() {
 ---
 
 ## 4. ✨ Bonus Tip: About `NULL`
+
 - `NULL` is a special constant that represents a **zero memory address** (nothing/empty pointer).
 - **It is also defined** in:
   - `stddef.h`
@@ -119,5 +122,3 @@ int main() {
 | Format Specifier    | `%zu`                                              |
 | Safer Input Idea    | Read as `long`, correct if needed, cast to `size_t`|
 | `NULL` Available In | `stddef.h`, `stdio.h`, `stdlib.h`, `string.h`      |
-
----

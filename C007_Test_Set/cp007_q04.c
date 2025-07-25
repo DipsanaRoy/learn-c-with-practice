@@ -1,4 +1,4 @@
-// CP7. Create an array of 10 integers to store multiplication table of user supplied number.
+// CP7.4. Create an array of 10 integers to store multiplication table of user supplied number.
 
 #include<stdio.h>
 

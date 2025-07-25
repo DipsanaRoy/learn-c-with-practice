@@ -1,4 +1,5 @@
-// C7. Arrays can be initialized in many ways...
+// C7.2. Arrays can be initialized in many ways...
+
 #include <stdio.h>
 
 int main()

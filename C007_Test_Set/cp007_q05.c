@@ -1,3 +1,5 @@
+// CP7.5. Create a function to reverse an array.
+
 #include <stdio.h>
 
 // Function Prototypes

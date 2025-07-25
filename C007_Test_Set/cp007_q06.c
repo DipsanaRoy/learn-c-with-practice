@@ -1,4 +1,4 @@
-// CP7. Functions that counts positive integers in an array.
+// CP7.6. Functions that counts positive integers in an array.
 
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
-// C7. Pointer Arithmetic
+// C7.8. Pointer Arithmetic
+
 #include <stdio.h>
 #include <stdint.h> // Use uintptr_t from <stdint.h>
 

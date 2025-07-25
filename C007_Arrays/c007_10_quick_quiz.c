@@ -1,4 +1,5 @@
-// C7. Create a 2D array via user input with a display function to print it's content on the screen.
+// C7.10. Create a 2D array via user input with a display function to print it's content on the screen.
+
 #include <stdio.h>
 
 // Function Prototype

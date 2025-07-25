@@ -1,4 +1,4 @@
-// CP7. Create a 10 number array. Verify using pointer arithmetic that (ptr + 2) points to the third element where ptr is a pointer pointing to the first element of the array.
+// CP7.1. Create a 10 number array. Verify using pointer arithmetic that (ptr + 2) points to the third element where ptr is a pointer pointing to the first element of the array.
 
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
-// C7. Array to store marks
+// C7.1. Array to store marks
+
 #include <stdio.h>
 
 int main()

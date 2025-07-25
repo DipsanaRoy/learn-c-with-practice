@@ -1,4 +1,4 @@
-// CP7. A 3 x 10 array containing multiplication tables of 2, 7 and 9.
+// CP7.7. A 3 x 10 array containing multiplication tables of 2, 7 and 9.
 
 #include <stdio.h>
 

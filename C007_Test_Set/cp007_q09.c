@@ -1,4 +1,4 @@
-// CP7. Create a 3-d array and print the address of its elements in increasing order
+// CP7.9. Create a 3-d array and print the address of its elements in increasing order
 
 #include <stdio.h>
 #include <stdint.h>

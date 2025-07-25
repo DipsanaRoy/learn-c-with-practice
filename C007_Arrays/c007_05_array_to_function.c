@@ -1,4 +1,5 @@
-// C7. Pass array to function
+// C7.5. Pass array to function
+
 #include <stdio.h>
 
 // Function Prototype

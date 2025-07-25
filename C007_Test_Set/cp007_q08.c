@@ -1,4 +1,4 @@
-// CP7. Q7 with custom input by the user
+// CP7.8. Q7 with custom input by the user
 
 #include <stdio.h>
 

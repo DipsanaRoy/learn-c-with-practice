@@ -1,4 +1,5 @@
-// CP7. False: *(s + 3) points to 4th element, not 3rd
+// CP7.2. False: *(s + 3) points to 4th element, not 3rd
+
 #include <stdio.h>
 
 int main() {

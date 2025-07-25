@@ -1,4 +1,5 @@
-// C7. Array Inputs
+// C7.3. Array Inputs
+
 #include <stdio.h>
 
 int main()

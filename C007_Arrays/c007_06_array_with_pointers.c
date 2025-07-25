@@ -1,4 +1,5 @@
-// C7. Access an array by pointers
+// C7.6. Access an array by pointers
+
 #include <stdio.h>
 
 int main()
