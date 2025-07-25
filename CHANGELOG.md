@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
-## \[v1.1.0] – 2025-07-23
+## \[v1.1.0] – Naming & Notes Revamp (2025-07-25)
 
 📌 **Minor version bump** with enhanced structure, readability, and learning support.
 
