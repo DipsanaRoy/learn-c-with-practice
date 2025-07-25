@@ -1,4 +1,4 @@
-// PC2. Loops: continue-or-stop program
+// PC1. Loops: continue-or-stop program
 #include <stdio.h>
 
 int main()
