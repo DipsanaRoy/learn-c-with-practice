@@ -8,7 +8,7 @@ void main()
 	puts("\nEnter any two numbers a and b respectively");
 	scanf("%d %d", &a, &b);
 
-	// Method 1 ---> Recommended Way in Every Language #Portable
+	// Method 1 -> Recommended (Portable and Lightest)
 	c = a;
 	a = b;
 	b = c;
@@ -20,20 +20,19 @@ void main()
 	a = a - b;
 	printf("\nAfter Swapping again, a = %d and b = %d\n", a, b);
 
-	// Method 3 ---> Recommended Way in C
+	// Method 3 -> Recommended
 	(a ^= b), (b ^= a), (a ^= b);
 	printf("\nAfter Swapping again, a = %d and b = %d\n", a, b);
 
-	// Non-reliable methods--->
-	// Method 4
+	// Method 4 -> ⚠️
 	a += b -= a = b - a;
 	printf("\nAfter Swapping again, a = %d and b = %d\n", a, b);
 
-	// Method 5
+	// Method 5 -> ⚠️
 	a += b - (b = a);
 	printf("\nAfter Swapping again, a = %d and b = %d\n", a, b);
 
-	// Method 6
+	// Method 6 -> ⚠️
 	b += a - (a = b);
 	printf("\nAfter Swapping again, a = %d and b = %d\n", a, b);
 }
