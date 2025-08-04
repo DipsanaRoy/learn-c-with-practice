@@ -11,7 +11,7 @@ int main()
     // User I/p: String
     char st[100];
     printf("\nEnter a string: ");
-    scanf("%[^\n]", st);
+    scanf("%100[^\n]", st);
     printf("\nOriginal string: %s\n", st);
 
     encrypt(st); // Function Call

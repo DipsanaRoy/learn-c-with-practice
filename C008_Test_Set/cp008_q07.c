@@ -11,7 +11,7 @@ int main()
     // I/p: String
     char st[100];
     printf("\nEnter a string: ");
-    scanf("%[^\n]", st);
+    scanf("%100[^\n]", st);
     printf("\nOriginal string: %s\n", st);
 
     encrypt(st); // call encrypt
@@ -35,7 +35,7 @@ void encrypt(char *st)
 
 void decrypt(char *st)
 {
-    // Decrypt string by ASCII + 1
+    // Decrypt string by ASCII - 1
     while (*st != '\0')
     {
         *st -= 1;
