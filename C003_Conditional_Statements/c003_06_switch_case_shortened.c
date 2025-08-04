@@ -15,8 +15,8 @@ int main() {
         case 3:
         case 4:
         case 5:
-            printf("%d\n", rating); // Not using breaks effectively
-            break;
+            printf("%d\n", rating);
+            break; // using break effectively
         default:
             puts("Invalid!");
     }
