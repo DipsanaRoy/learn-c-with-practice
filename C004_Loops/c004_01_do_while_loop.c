@@ -4,21 +4,21 @@
 
 int main()
 {
-    // Iterator and store user entered number
+    // Initialize: iterator & user entered number
     int i = 1, n;
 
     printf("\nEnter any number: ");
     scanf("%d", &n);
 
-    // negative numbers auto-correct 
-    if (n > 0)
-        n *= -1; // short hand operator, it means n * n = -1;
+    // negative numbers auto-correct
+    if (n < 0)
+        n *= -1; // short hand operator, it means n = n * -1;
 
-    // Loop runs at least once, then checks the condition: enter 0 to see.
+    // Loop runs at least once, then checks the condition: enter 0 to see
     do {
         printf("%d\n", i);
-        i++;
-    } while (i <= n);
+        i++;            // update
+    } while (i <= n);   // condition
 
     return 0;
 }

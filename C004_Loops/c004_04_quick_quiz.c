@@ -4,7 +4,7 @@
 
 int main()
 {
-    // Iterator and store user entered number
+    // Init: iterator & user entered number
     int i, n;
 
     printf("\nEnter any natural number: ");
