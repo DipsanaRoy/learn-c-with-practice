@@ -16,7 +16,7 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         arr[i] = n * (i + 1);
-        printf("%d x %d = %d\n", n, i + 1, arr[i]);
+        printf("%d x %-2d = %d\n", n, i + 1, arr[i]);
     }
     return 0;
 }

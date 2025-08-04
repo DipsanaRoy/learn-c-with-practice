@@ -5,9 +5,8 @@
 
 int main()
 {
-    // Init:
-    // i, j & k for iteration
-    // arr as a 3-d array
+    // Init: i, j & k for iteration
+    // Store: arr as a 3-d array
     int i, j, k, arr[2][3][4] = {
         {
             {1, 2, 3, 4},
@@ -21,7 +20,6 @@ int main()
         }
     };
 
-
     // Output
     for (i = 0; i < 2; i++)
     {
@@ -30,7 +28,7 @@ int main()
             putchar('\n');
             for (k = 0; k < 4; k++)
             {
-                printf("The address of arr[%d][%d][%d] is %u\n", i, j, k, (uintptr_t)&arr[i][j][k]);
+                printf("arr[%d][%d][%d] address: %u\n", i, j, k, (uintptr_t)&arr[i][j][k]);
             }
         }
         
