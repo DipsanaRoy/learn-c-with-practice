@@ -11,7 +11,7 @@ int main()
     for (int i = 0; i < 10; i++)
     {
         arr[i] = 5 * (i + 1);
-        printf("5 x %d = %d\n", i + 1, arr[i]);
+        printf("5 x %-2d = %d\n", i + 1, arr[i]);
     }
     return 0;
 }

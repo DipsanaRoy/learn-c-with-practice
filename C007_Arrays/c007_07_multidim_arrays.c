@@ -1,7 +1,7 @@
 /* C7.7. Enter and display student subject-wise marks.
-    
+
     3d, 4d and more complex arrays are possible but aren't used as such.
-    
+
     3d array visualization: int marks[n_schools][n_students][n_subjects];
  */
 
@@ -9,7 +9,7 @@
 
 int main()
 {
-    // Initialize: no. of students & subjects
+    // Input: no. of students & subjects
     int n_stud, n_sub;
 
     printf("\nEnter the number of students: ");
@@ -20,7 +20,7 @@ int main()
 
     int marks[n_stud][n_sub]; // store students & their marks
 
-    // Input
+    // Input: marks
     for (int i = 0; i < n_stud; i++)
     {
         putchar('\n');
@@ -30,7 +30,7 @@ int main()
             scanf("%d", &marks[i][j]);
         }
     }
-    
+
     // Output
     for (int i = 0; i < n_stud; i++)
     {
@@ -38,9 +38,7 @@ int main()
         for (int j = 0; j < n_sub; j++)
         {
             printf("Student %d | Subject %d | Marks: %d\n", i + 1, j + 1, marks[i][j]);
-            // Note: Only Prefix or Postfix ++ -- operators changes values. Read: C7_ARR_NOTES.md!
         }
     }
-
     return 0;
 }

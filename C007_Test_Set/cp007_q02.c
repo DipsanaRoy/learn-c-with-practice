@@ -5,8 +5,8 @@
 int main() {
     int s[] = {10, 20, 30, 40, 50};
 
-    printf("s[3]     = %d\n", s[3]);     // Array indexing
-    printf("*(s + 3) = %d\n", *(s + 3)); // Pointer arithmetic
+    printf("\ns[3]     = %d", s[3]);       // Array indexing
+    printf("\n*(s + 3) = %d\n", *(s + 3)); // Pointer arithmetic
 
     return 0;
 }

@@ -9,13 +9,13 @@ int main()
 {
     int mulTable[3][10]; // initialize arr
 
-    /* Don't get confused: 2 * 1 = 2, 7 * 1 = 7 and so on. 
-        So base = 1st element i.e. mulTable[...][0]. */
+    /* Don't get confused: 2 * 1 = 2, 7 * 1 = 7 and so on. So for every nth table:
+        base = 1st element = mulTable[n][0]. */
     mulTable[0][0] = 2;
     mulTable[1][0] = 7;
     mulTable[2][0] = 9;
 
-    // Function Calls
+    // Function Calls [Note: We are passing 1D array here]
     printTable(mulTable[0]);
     printTable(mulTable[1]);
     printTable(mulTable[2]);
@@ -33,6 +33,6 @@ void printTable(int *mulTable)
     {
         mulTable[j] = base * (j + 1); // store tables
 
-        printf("%d x %d = %d\n", base, j + 1, mulTable[j]); // O/p
+        printf("%d x %-2d = %d\n", base, j + 1, mulTable[j]); // O/p
     }
 }

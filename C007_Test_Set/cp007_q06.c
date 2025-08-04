@@ -7,10 +7,10 @@ int positive(int *arr, size_t length);
 
 int main()
 {
-    int arr[] = {-1, 2, 3, 4, 5, -6, 7, -8};      // create array
+    int arr[] = {-1, 2, 3, 4, 5, -6, 7, -8}; // create array
 
-    size_t length = sizeof(arr) / sizeof(arr[0]); // arr length
-    size_t posInts = positive(arr, length);       // no. of positive int in arr
+    size_t length = sizeof(arr) / sizeof(arr[0]), // arr length
+          posInts = positive(arr, length);        // no. of positive int in arr
 
     printf("\nThere %s %zu positive int in the array!", posInts == 1 ? "is" : "are", posInts); // O/p
     return 0;

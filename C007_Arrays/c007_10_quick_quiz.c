@@ -3,46 +3,46 @@
 #include <stdio.h>
 
 // Function Prototype
-void display(int row, int column, int arr[row][column]);
+void display(size_t row, size_t column, int arr[row][column]);
 
 int main()
 {
-    // Initialize: no. of rows and columns
-    int row, column;
+    // I/p: no. of rows and columns
+    size_t row, column; // Why size_t? Read: C007_SIZE_NOTES.md
 
     printf("\nEnter the number of matrix rows: ");
-    scanf("%d", &row);
+    scanf("%zu", &row);
 
     printf("\nEnter the number of matrix columns: ");
-    scanf("%d", &column);
+    scanf("%zu", &column);
 
     int arr[row][column]; // store 2D array
 
-    // Input
+    // I/p
     puts("\nStart to enter matrix elements one by one");
-    for (int i = 0; i < row; i++)
+    for (size_t i = 0; i < row; i++)
     {
-        for (int j = 0; j < column; j++)
+        for (size_t j = 0; j < column; j++)
         {
-            printf("Enter Row [%d] Column [%d] | element: ", i + 1, j + 1);
+            printf("Enter Row [%zu] Column [%zu] | element: ", i + 1, j + 1);
             scanf("%d", &arr[i][j]);
         }
         putchar('\n');
     }
 
     puts("Generated 2D Array:");
-    display(row, column, arr); // Function Call
+    display(row, column, arr); // Function Call: O/p
     return 0;
 }
 
 // Function Description: prints 2d array
-void display(int row, int column, int arr[row][column])
+void display(size_t row, size_t column, int arr[row][column])
 {
-    for (int i = 0; i < row; i++)
+    for (size_t i = 0; i < row; i++)
     {
-        for (int j = 0; j < column; j++)
+        for (size_t j = 0; j < column; j++)
         {
-            printf("%d ", arr[i][j]);
+            printf("%3d ", arr[i][j]); // 3 provides indentation, %d also works fine (in notes)
         }
         putchar('\n');
     }
