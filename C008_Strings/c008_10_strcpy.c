@@ -6,7 +6,7 @@
 int main()
 {
     char *s2 = "That";
-    char s1[45] = "This";
+    char s1[5] = "This";
 
     printf("\ns1: %s"
            "\ns2: %s\n",

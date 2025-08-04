@@ -1,6 +1,7 @@
 // CP8.8. Count the occurrence of a given character in a String
 
 #include <stdio.h>
+#include <string.h>
 
 // Function Prototype
 int countOccurrence(char *st, char c);
@@ -12,18 +13,16 @@ int main()
 
     // String I/p
     printf("\nEnter a string: ");
-    scanf("%[^\n]", st);
+    fgets(st, sizeof(st), stdin);
 
-    // To avoid: second scanf catching '\n'
-    int ch;
-    while ((ch = getchar()) != '\n' && ch != EOF); // getchar() gets character input from buffer
+    st[strcspn(st, "\n")] = '\0'; // To remove '\n' from st
 
     // Char I/p
     printf("\nEnter a character to count it's occurrence: ");
-    scanf("%c", &c);
+    scanf(" %c", &c);
 
     // O/p
-    ch = countOccurrence(st, c);
+    int ch = countOccurrence(st, c);
     printf("\n\'%c\' is present inside \"%s\": %d time%s.", c, st, ch, (ch > 1? "s" : "" )); // Function Call
     return 0;
 }

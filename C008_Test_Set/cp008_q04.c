@@ -14,7 +14,7 @@ int main()
 
     // I/ps:
     printf("\nEnter a string: ");
-    scanf("%[^\n]", st);
+    scanf("%100[^\n]", st); // Use %100 to limit the input to 100 characters
 
     printf("Enter slice start: ");
     scanf("%zu", &start);

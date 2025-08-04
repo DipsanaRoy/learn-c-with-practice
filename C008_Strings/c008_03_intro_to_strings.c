@@ -10,7 +10,7 @@ int main()
     // Init: String conveniently
     char str2[] = "Name"; // NOTE: DOUBLE QUOTES ARE MUST!!!
 
-    printf("\nFirst name: %s\n", str);
-    printf("Last name: %s\n", str2);
+    printf("\nFirst name: %s", str);
+    printf("\nLast name: %s\n", str2);
     return 0;
 }

@@ -111,7 +111,7 @@ If you really want to **check for bad input**:
 
 - Always store `getchar()` result into an `int`.
 - Check if it's `EOF` before processing.
-- Clear buffer properly if needed (we'll discuss more in `cp8_notes.md`).
+- Clear buffer properly if needed (we'll discuss more in `CP008_NOTES.md`).
 
 ---
 

@@ -12,7 +12,7 @@ int main()
 
     // Compares ASCII values of characters in two strings.
     // Based on the first character mismatch it returns:
-    // 0 if equal, > 0 if first string is greater, < 0 if second string is greater .
+    // 0 if equal, > 0 if first string is greater, < 0 if second string is greater.
     int val = strcmp(s1, s2);
     
     printf("\nstrcmp(s1, s2): %d\n", val);

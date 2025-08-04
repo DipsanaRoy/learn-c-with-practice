@@ -10,7 +10,7 @@ int main()
     // I/p: String & Character 
     char st[100], c; int ch;
     printf("\nEnter a string: ");
-    scanf("%[^\n]", st);
+    scanf("%100[^\n]", st);
 
     while ((ch = getchar()) != '\n' && ch != EOF); // To avoid: second scanf catching '\n'
     printf("\nEnter a character to look for: ");
@@ -19,7 +19,7 @@ int main()
     // O/p
     int isPresent = look(st, c); // call look
     if (isPresent)
-        printf("\n\'%c\' is present at position %d!\n", c, isPresent);
+        printf("\n\'%c\' is present at index %d!\n", c, isPresent);
     else
         printf("\n\'%c\' is not present!\n", c);
     
@@ -34,7 +34,7 @@ int look(char *st, char c)
     {
         // checks 'c' character-wise
         if (st[i] == c)
-            return i + 1; // 1-based index
+            return i;
     }
     return 0;
 }
