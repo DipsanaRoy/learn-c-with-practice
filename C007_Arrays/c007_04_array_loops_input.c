@@ -12,6 +12,7 @@ int main()
     {
         printf("Enter Student %d | marks: ", i + 1);
         scanf("%d", &marks[i]);
+        // Note: Only Prefix or Postfix ++ -- operators changes values. Read: C007_ARR_NOTES.md!
     }
 
     // Display:

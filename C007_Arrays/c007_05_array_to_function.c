@@ -22,7 +22,7 @@ void printArray(int *ptr, int n)
     putchar('\n');
     for (int i = 0; i < n; i++)
     {
-        printf("Element %d | value: %d\n", i + 1, *(ptr + i)); // Want to know more? Read: c7_arr_notes.md
+        printf("Element %d | value: %d\n", i + 1, *(ptr + i)); // Want to know more? Read: C007_ARR_NOTES.md
     }
     ptr[2] = 999; // In main, arr[2] value will also change to 999
 }

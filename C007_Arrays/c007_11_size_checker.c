@@ -1,4 +1,4 @@
-// C7.11. Check data type sizes in your architecture
+// C7.11. Check data type sizes in your system architecture
 
 #include <stdio.h>
 

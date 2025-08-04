@@ -92,6 +92,19 @@ printf("Student %d | marks in subject %d is: %d\n", i + 1, j + 1, marks[i][j]);
 - `n` → means **minimum width**, the number will be **right-aligned**.
 - `d` → means it's an integer.
 
+### Example: `%2d`
+
+`2` → is **minimum width**, the number will be **right-aligned**.
+
+```c
+printf("Student %2d | Marks: %d", s, m);
+```
+
+```text
+Student  1 | Marks: 78
+Student 10 | Marks: 90
+```
+
 ### Example: `%-2d`
 
 - `2` → is **minimum width**.

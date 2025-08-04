@@ -13,9 +13,9 @@ int *ptr1 = &n1, *ptr2 = &n2;
 int main()
 {
     puts("\nPointer Operations:\n"
-         "1. Addition    ->   Number + Pointer"
-         "2. Subtraction ->   Pointer - Number"
-         "3. Subtraction ->   Pointer - Pointer"
+         "1. Addition    ->   Number + Pointer\n"
+         "2. Subtraction ->   Pointer - Number\n"
+         "3. Subtraction ->   Pointer - Pointer\n"
          "4. Comparison  ->   Equality check of two pointer variables");
 
     add();        // 1. Addition of a number to a pointer
@@ -64,8 +64,9 @@ void sub2()
 void comparison()
 {
     puts("\n4. Comparison of two pointer variables");
-    printf("ptr1 = %u\n", (uintptr_t)ptr1);
-    printf("ptr2 = %u\n", (uintptr_t)ptr2);
+    printf("ptr1 = %u\n"
+           "ptr2 = %u\n",
+           (uintptr_t)ptr1, (uintptr_t)ptr2);
 
     if (ptr1 > ptr2)
         puts("ptr1 is greater");
