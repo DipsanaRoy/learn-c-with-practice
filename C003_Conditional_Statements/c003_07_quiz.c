@@ -30,7 +30,7 @@ int main()
         grade = 'F';
         break;
     }
-    (marks < 101) ? printf("The grade of the student is %c\n", grade) : puts("Invalid Input!\n");
+    (marks < 0 || marks > 100) ? puts("Invalid Input!") : printf("The grade of the student is %c\n", grade);
 
     return 0;
 }
