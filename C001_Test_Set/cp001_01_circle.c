@@ -1,4 +1,4 @@
-// CP1. Calculate area of circle and cylinder
+// CP1.1. Calculate area of circle and cylinder
 
 #include <stdio.h>
 #include <math.h> // M_PI --> to get accurate PI value

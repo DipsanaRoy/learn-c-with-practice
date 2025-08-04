@@ -8,7 +8,7 @@ int main()
     printf("\nEnter the temperature in Celsius: ");
     scanf("%f", &celsius);
 
-    fahrenheit = (celsius * 1.8) + 32.0;
+    fahrenheit = celsius * 1.8 + 32.0;
 
     printf("\nTemperature in Fahrenheit is %f\n", fahrenheit);
 
