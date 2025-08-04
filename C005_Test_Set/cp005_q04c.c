@@ -1,4 +1,4 @@
-// CP5.4. Calculate the nth element of Fibonacci series [Recursion]
+// CP5.4c. Calculate the nth element of Fibonacci series [Recursion]
 
 #include <stdio.h>
 
@@ -11,22 +11,26 @@ int main()
     printf("\nEnter the nth element: ");
     scanf("%d", &n);
 
-    if (n == 0) puts("Please enter a non-zero value!");
+    if (n == 0) 
+    {
+        puts("Please enter a non-zero value!");
+        return 0;
+    }
 
     printf("Element number %d of Fibonacci series is ", n);
-    printf("%d");
     if (n > 2)
     {
-        printf(calculate(n - 1));
+        printf("%d", calculate(n - 1));
     }
     else if (n > 0)
     {
-        printf(n - 1);
+        printf("%d", n - 1);
     }
     else
     {
-        printf((-1 * calculate((n + 1) * -1)));
+        printf("%s%d", (n < 0 && n % 2 == 0) ? "-" : "", calculate((n + 1) * -1));
     }
+    puts(".");
     return 0;
 }
 

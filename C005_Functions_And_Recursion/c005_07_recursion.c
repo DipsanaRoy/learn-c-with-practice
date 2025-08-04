@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-// see: c5_factorial_by_recursion.md
+// see: C005_NOTES.md
 int factorial(int n)
 {
     // Base case: factorial of 0 or 1 is 1
