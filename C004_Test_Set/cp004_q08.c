@@ -4,13 +4,18 @@
 
 int main()
 {
-    // iterator, store number & factorial
-    int i, num, fact = 1;
-
+    // I/p: number & store factorial
+    int num, fact = 1;
     printf("\nEnter a number: ");
     scanf("%d", &num);
 
-    for (i = 2; i <= num; i++)
+    if (num < 0)
+    {
+        puts("Factorial is not defined for negative numbers.");
+        return 0;
+    }
+
+    for (int i = 2; i <= num; i++)
         fact *= i;
 
     printf("Factorial of %d is %d\n", num, fact);

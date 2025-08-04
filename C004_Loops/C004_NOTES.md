@@ -1,101 +1,149 @@
-# C004. More on Loops
+# 📘 C004. More on Loops & Control Tricks
 
-## 1. Entry Control Loop vs Exit Control Loop
+## 1. ✅ Entry Control Loop vs Exit Control Loop
 
-✅ **Entry Control Loop** → **Condition is checked first, then the loop runs.**  
-✅ **Exit Control Loop** → **Loop runs at least once, then checks the condition.**
+| Type              | Meaning                                            | Examples       |
+| ----------------- | -------------------------------------------------- | -------------- |
+| **Entry Control** | Condition is checked **before** the loop runs      | `for`, `while` |
+| **Exit Control**  | Loop runs **at least once**, then checks condition | `do-while`     |
 
----
-
-### Examples
-
-- **Entry Control Loops** (Condition checked **before** execution)  
-  - `for`  
-  - `while`  
-
-- **Exit Control Loop** (Condition checked **after** execution)  
-  - `do-while`  
-
-💡 *`do-while`* is the only exit control loop in C. Everything else is entry control!
+💡 *Only `do-while` is an exit control loop in C.*
 
 ---
 
-## 2. How Condition Checking Works in C
+## 2. 🔍 How Condition Checking Works in C
 
-- In any `if`, ternary (`? :`), or loop statement,  
-  - **Any non-zero value** is treated as **`true`**.
-  - **0** is treated as **`false`**.
+* In `if`, ternary (`? :`), or loop:
+
+  * **0 → false**, any **non-zero → true**
 
 ### Example
 
 ```c
-if (1) // true
-    printf("This will run!");
-
-if (0) // false
-    printf("This won't run!");
+if (1) printf("This runs!");
+if (0) printf("This won't run!");
 ```
 
 ---
 
-## 3. ⚠️ Be Careful: Infinite Loop Trap
+## 3. ⚠️ Infinite Loop Trap
 
-Sometimes beginners accidentally cause infinite loops by missing proper initialization or condition checks.
+Uninitialized loop variables can trap you.
 
-### Tricky Example
+### 🌀 Example
 
 ```c
-for (int i; i; )
-{
-    // Infinite loop! because 'i' is uninitialized (random garbage value)
-}
+for (int i; i; ) { } // Infinite loop! 'i' contains garbage value
 ```
-
-- Here, `i` contains an unknown value, which might be nonzero, causing the loop to never end!
 
 ---
 
-## 4. ✨ Why `while(*p)` works?
-
-This is a classic C idiom used when working with strings.
-
-### 🎯 Example
+## 4. 🌟 Why `while(*p)` Works
 
 ```c
 char *p = "hello";
-while (*p)
-{
-    printf("%c\n", *p);
+while (*p) {
+    printf("%c", *p);
     p++;
 }
 ```
 
-✅ **Why it stops:**  
-
-- Strings end with a **null character (`'\0'`)**, which is value **0**.
-- `*p` reads the current character.
-- So `while (*p)` means: “Run until the current character is not `'\0'`.”
-
-⛔ When `*p` becomes `'\0'`, the loop stops automatically.
+✔ Stops when `*p` hits `'\0'` (i.e., null char = 0)
 
 ---
 
-## 5. ✨ `for (i = 0; 0; i++)` — Will `i` still become 0?
+## 5. 🔁 `for (i = 0; 0; i++)` – Will `i` be 0?
 
-Yes! As the **initialization part of a `for` loop always executes** before the condition is checked.
-
-### Think of it as: `for` (`Init;` → `Condition;` → `Update`) → `{`...`}`
-
-### ⚔️ Example
+Yes, **initialization always runs**, even if the condition is false.
 
 ```c
 int i = 5;
-for (i = 0; 0; i++)
-{
-    // This will never run!
-}
-printf("%d", i); // Output: 0
+for (i = 0; 0; i++) { }
+printf("%d", i); // Outputs: 0
 ```
 
-✅ Even though the loop doesn’t run, `i = 0` **still happens**.  
-💡 The **condition (0)** is false, so the loop body and `i++` are skipped, but the **init runs anyway**.
+---
+
+## 6. 🌀 `+++`, `++++`, `---`, `----` → Valid?
+
+### ✅ Valid
+
+* `++`, `--` → standard increment/decrement
+
+### ❌ `+++` or `---`
+
+* Not valid as a single operator
+* Interpreted as: `++ +` or `-- -` → Confusing, mostly invalid
+
+### ✅ `++++a`, `----b`
+
+* Parsed as `++(++a)` or `--(--b)` → Valid but messy
+* **Avoid using them** for clarity
+
+---
+
+### 🧠 Final Tip
+
+* Use only `++` and `--` clearly
+* Avoid chained confusing expressions like `++++++a` even if they technically work
+
+---
+
+## 7. Nested Loops
+
+Nested loops loops means **loops inside loops**. We can also have nested if-else clause, ternary and switch statments.
+
+### 7. ✅ `break` Statement in Nested Loops
+
+* `break` **only exits the loop it is directly inside.**
+* It does **not** break out of outer loops.
+
+### ✅ `continue` Statement in Nested Loops
+
+* `continue` also applies **only to the loop it’s directly inside.**
+* It **skips the rest of the current iteration** and goes to the next iteration of that **same loop**.
+
+---
+
+### 🔍 Example
+
+```c
+for (int i = 1; i <= 2; i++) {
+    for (int j = 1; j <= 3; j++) {
+        if (j == 2)
+            break; // or continue;
+        printf("i=%d, j=%d\n", i, j);
+    }
+}
+```
+
+#### If `break`
+
+Output:
+
+```text
+i=1, j=1
+i=2, j=1
+```
+
+→ Break skips out of **inner loop only** when `j == 2`.
+
+#### If `continue`
+
+Output:
+
+```text
+i=1, j=1
+i=1, j=3
+i=2, j=1
+i=2, j=3
+```
+
+→ Continue **skips `j == 2`** but continues looping.
+
+---
+
+So,
+
+* 🟥 `break` → exits **just the inner loop**
+* 🟡 `continue` → skips just **one inner iteration**

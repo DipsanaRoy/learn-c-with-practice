@@ -4,15 +4,15 @@
 
 int main()
 {
-    // iterator, number, sum
-    int i, n, sum = 0;
+    // number, sum
+    int n, sum = 0;
     
     printf("\nEnter any natural number: ");
     scanf("%d", &n);
 
     if (n > 0)
     {
-        for(i = 1; i <= n; i++)
+        for(int i = 1; i <= n; i++)
         {
             sum += i;
         }
