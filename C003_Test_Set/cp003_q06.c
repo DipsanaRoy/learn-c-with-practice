@@ -11,18 +11,15 @@ int main()
 
     int greatest = a; // stores greatest value
 
+    // Without {}, only 1 line runs after if / else if / else
     if (b > greatest)
-    {
         greatest = b;
-    }
+    
     if (c > greatest)
-    {
         greatest = c;
-    }
+    
     if (d > greatest)
-    {
         greatest = d;
-    }
 
     printf("\n%d is the greatest!\n", greatest);
     return 0;

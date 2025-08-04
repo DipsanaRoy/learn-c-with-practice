@@ -17,6 +17,6 @@ int main()
     }
     else printf("The student has failed");
 
-    printf(" with %.2f%%\n", avg); // %% output-> %
+    printf(" with %.2f%%\n", avg); // %% output → %
     return 0;
 }
