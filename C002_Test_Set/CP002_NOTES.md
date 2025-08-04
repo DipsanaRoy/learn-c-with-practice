@@ -148,10 +148,3 @@ double result = a + b;  // 'a' and 'b' promoted to double
 | `float`       | ~ ±3.4 × 10³⁸              |
 | `double`      | ~ ±1.7 × 10³⁰⁸             |
 | `long double` | Even larger (compiler-dependent) |
-
----
-
-### 🔥 Fun Tip
-
-- `15.e45` ➔ Valid (`15.0 × 10^45`)
-- `45e.45` ➔ ❌ Invalid (must be `45e2` or `45e-2`, not decimal after `e`)
