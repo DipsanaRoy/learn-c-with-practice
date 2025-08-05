@@ -9,6 +9,7 @@
 
 // Function Prototypes
 void clearBuffer(), gameResults(char comp, char you);
+char *fullMoveName(char c);
 char safe_input();
 int replay();
 
@@ -33,7 +34,7 @@ int main()
 
 void gameResults(char comp, char you)
 {
-    printf("\nYou chose '%c' and computer chose '%c'. ", you, comp);
+    printf("\nYou chose \"%s\" and computer chose \"%s\". ", fullMoveName(you), fullMoveName(comp));
     // Draw: rr, pp, ss
     if (comp == you)
     {
@@ -49,6 +50,14 @@ void gameResults(char comp, char you)
     {
         puts("Oops, computer won!");
     }
+}
+
+// Returns full name of the move e.g. r for Rock
+char *fullMoveName(char c)
+{
+    if (c == 'r') return "Rock";
+    if (c == 'p') return "Paper";
+    return "Scissors";
 }
 
 // Clear input buffer
