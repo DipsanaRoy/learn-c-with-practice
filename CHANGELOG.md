@@ -6,6 +6,48 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## \[v1.1.1] – 🩹 Patch: Comment, Output & Notes Refinement (2025-08-05)
+
+📌 **Patch version bump** focused on enhancing clarity, fixing bugs, and refining learning experience.
+
+---
+
+### ✨ Changed
+
+* 📝 Updated code comments for **clearer explanations**
+* 📤 Enhanced output formatting in several programs (e.g., grouped print statements, added line breaks)
+* 🧠 Refined wording and sequence in select notes for better readability
+* ✅ Improved ternary usage for clarity and logic flow
+
+---
+
+### 🧹 Improved
+
+* 🚿 Cleaned up unused headers and redundant lines
+* 🧽 Formatted `printf()` statements for better alignment and presentation
+* 🧼 Used `%zu` instead of `%d` for `size_t` to match correct data type
+
+---
+
+### 🐞 Fixed
+
+* 🐛 Resolved potential infinite loop in input scenario
+* 🐞 Fixed incorrect format specifiers and buffer edge cases
+* 🔒 Enhanced safety for `fgets()` with proper newline handling and `strcspn()`
+
+---
+
+### 📚 Notes Tweaked
+
+* ✍️ Added **`double` initialization with `scanf()`** under **C002. Data Type** section
+* 🌱 Marked relation of `double` with `long`/`long double` family for conceptual clarity
+
+---
+
+🔖 Tagged and sealed with care by **Dipsana**
+
+---
+
 ## \[v1.1.0] – Naming & Notes Revamp (2025-07-25)
 
 📌 **Minor version bump** with enhanced structure, readability, and learning support.
@@ -75,8 +117,11 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
-📌 No Next Planned Release Soon
+📌 Future Updates
+> CP005_NOTES.md - Enhance and simplify factorial explanation and added a cp005_q07.c and cp005_q08.c explanations.
+> Quizzes with interview tricky questions
 > Will update my other learning repositories extending this topic
+> Keeps learning sharp, code clean, and notes evolving ✨
 
 ---
 
