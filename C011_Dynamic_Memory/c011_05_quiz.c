@@ -5,7 +5,7 @@
 
 int main()
 {
-    // I/p: user-defined n
+    // User I/p: n
     size_t n;
     printf("\nHow many integers you want to store?: ");
     scanf("%zu", &n);
@@ -16,7 +16,7 @@ int main()
     putchar('\n');
     for (size_t i = 0; i < n; i++)
     {
-        printf("Enter element |%3d|: ", i + 1);
+        printf("Enter element |%3zu|: ", i + 1);
         scanf("%d", &ptr[i]);
     }
 
@@ -24,7 +24,7 @@ int main()
     puts("\nStored values:");
     for (size_t i = 0; i < n; i++)
     {
-        printf("Element |%3d|: %d\n", i + 1, ptr[i]);
+        printf("Element |%3zu|: %d\n", i + 1, ptr[i]);
     }
     free(ptr); // Free heap memory
     return 0;

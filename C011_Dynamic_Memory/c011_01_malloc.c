@@ -21,13 +21,13 @@ int main()
     puts("\nptr1 values:");
     for (size_t i = 0; i < size; i++)
     {
-        printf("Element |%3d|: %d\n", i + 1, ptr1[i]);
+        printf("Element |%3zu|: %d\n", i + 1, ptr1[i]);
     }
 
     puts("\nptr2 values:");
     for (size_t i = 0; i < size; i++)
     {
-        printf("Element |%3d|: %d\n", i + 1, ptr2[i]);
+        printf("Element |%3zu|: %d\n", i + 1, ptr2[i]);
     }
     
     free(ptr1);
