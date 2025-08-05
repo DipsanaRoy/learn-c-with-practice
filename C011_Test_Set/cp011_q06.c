@@ -16,14 +16,14 @@ int main()
     printf("\nEnter %zu element%s one by one\n", len, (len > 1 ? "s" : ""));
     for (size_t i = 0; i < len; i++)
     {
-        printf("Enter element |%3zu|: ", i + 1);
+        printf("Enter element |%zu|: ", i + 1);
         scanf("%d", &arr[i]);
     }
     
     puts("\nStored values:");
     for (size_t i = 0; i < len; i++)
     {
-        printf("Element |%3zu|: %d\n", i + 1, arr[i]);
+        printf("Element |%zu|: %d\n", i + 1, arr[i]);
     }
     
     // Increase array to 10 elements
@@ -34,21 +34,21 @@ int main()
     printf("\nEnter %zu more element%s\n", newLen - len, (newLen - len > 1 ? "s one by one" : ""));
     for (size_t i = len; i < newLen; i++)
     {
-        printf("Enter element |%3zu|: ", i + 1);
+        printf("Enter element |%2zu|: ", i + 1);
         scanf("%d", &arr[i]);
     }
 
     puts("\nStored values after increase:");
     for (size_t i = 0; i < newLen; i++)
     {
-        printf("Element |%3zu|: %d\n", i + 1, arr[i]);
+        printf("Element |%2zu|: %d\n", i + 1, arr[i]);
     }
 
     free(arr);
     return 0;
 }
 
-// Function Definitions:
+// Function Definition
 void memFail(int *arr)
 {
     if (arr == NULL)

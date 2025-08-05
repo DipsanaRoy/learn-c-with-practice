@@ -13,32 +13,34 @@ int main()
     int m = 10;
     int *t = (int *)malloc(m * sizeof(*t));
     memFail(t);
-    
+
     puts("\nBefore Reallocating:");
     for (int i = 0; i < m; i++)
     {
         t[i] = 7 * (i + 1);
-        printf("7 x %d = %d\n", i + 1, t[i]);
+        printf("7 x %-2d = %d\n", i + 1, t[i]);
     }
-    
+
     // Reallocate memory to store 15 multipliers
     m = 15;
     t = realloc(t, m * sizeof(*t));
     memFail(t);
-    
-    puts("\nAfter Reallocating:");
+
     for (int i = 10; i < m; i++)
-    {
         t[i] = 7 * (i + 1);
-        printf("7 x %d = %d\n", i + 1, t[i]);
-    }
+
+    puts("\nAfter Reallocating:");
+    for (int i = 0; i < m; i++)
+        printf("7 x %-2d = %d\n", i + 1, t[i]);
+
     free(t);
     return 0;
 }
 
 // Function Definition
-int memFail(int *arr) {
-    if(arr == NULL)
+int memFail(int *arr)
+{
+    if (arr == NULL)
     {
         puts("\nMemory allocation failed! Exiting program...");
         exit(1);
