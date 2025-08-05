@@ -20,7 +20,7 @@ int main()
     for (int i = 0; i < 3; i++)
     {
         printf("\nEnter Employee |%d| Name: ", i + 1);
-        scanf(" %20[^\n]", facebook[i].name);
+        scanf("%20[^\n]", facebook[i].name);
 
         printf("Enter Employee |%d| Code: ", i + 1);
         scanf("%d", &facebook[i].code);
@@ -33,12 +33,12 @@ int main()
     }
 
     // Output: employee details
-    puts("*********************************************************");
+    puts("\n*********************************************************");
     for (int i = 0; i < 3; i++)
     {
-        printf("\nEmployee |%d| Name: %s", i + 1, facebook[i].name);
-        printf("\nCode: %d", facebook[i].code);
-        printf("\nSalary: %.2f\n", facebook[i].salary);
+        printf("Employee |%d| Name: %s\n", i + 1, facebook[i].name);
+        printf("Code: %d\n", facebook[i].code);
+        printf("Salary: %.2f\n\n", facebook[i].salary);
     }
     return 0;
 }

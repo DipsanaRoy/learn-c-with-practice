@@ -31,7 +31,7 @@ int main()
     for (size_t i = 0; i < n; i++)
     {
         int year, month, day;
-        printf("\nEnter date |%d|:\n", i + 1);
+        printf("\nEnter date %d:\n", i + 1);
 
         // I/p: year
         printf("Enter year: ");
@@ -55,7 +55,7 @@ int main()
         else if (day > DIM)
         {
             day = DIM;
-            printf("\nDays auto-corrected to: %d", DIM);
+            printf("\nDays auto-corrected to: %d\n", DIM);
         }
 
         // Set Values

@@ -28,9 +28,9 @@ int main()
     scanf("%3f", &s1->marks);
 
     // Remove: '\n' from the end of name
-    unsigned int length = strlen(s1->name); // unsigned int holds positive int values
-    if (s1->name[length - 1] == '\n')
-        s1->name[length - 1] = '\0';
+    unsigned int end = strlen(s1->name) - 1; // unsigned int holds positive int values
+    if (s1->name[end] == '\n')
+        s1->name[end] = '\0';
         
     changeMarks(s1); // change marks
 
