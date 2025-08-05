@@ -22,7 +22,7 @@ int main()
             int is_num = 1;
             for (size_t i = 0; token[i] != '\0'; i++)
             {
-                if (!isdigit(token[i]))
+                if (!isdigit(token[i])) // isdigit returns 1 if String digit is found
                 {
                     is_num = 0;
                     break;
