@@ -1,4 +1,4 @@
-// CP10.4. Take name and salary of 2 employees as user input and write them to a text file
+// CP10.4. Take name and salary of 2 employees as user input and write them to a text file in a not recommended way (as it'll harder to read from a file)
 
 #include <stdio.h>
 #include <string.h>
@@ -11,7 +11,7 @@ typedef struct employee
 } emp;
 
 // Function Prototype
-void inputEmp(emp e[], int n);
+void inputEmp(emp e[], size_t n);
 
 int main()
 {
@@ -25,35 +25,38 @@ int main()
 
     // Create emp no. based dynamic file
     char filename[20];
-    snprintf(filename, sizeof(filename), "emp%d.txt", n);
+    snprintf(filename, sizeof(filename), "emp%zu.txt", n);
     FILE *ptr = fopen(filename, "w"); // Open the file || W
 
     // Write employee details to the file
-    fprintf(ptr, "'%d' employee details are:\n", n);
-    for (int i = 0; i < n; i++)
+    fprintf(ptr, "%zu employee details are:\n", n);
+    for (size_t i = 0; i < n; i++)
     {
-        fprintf(ptr, "\nEmployee %d name: %s", i + 1, e[i].name);
-        fprintf(ptr, "\nEmployee %d salary: %d\n", i + 1, e[i].salary);
+        fprintf(ptr, "\nEmployee %zu name: %s", i + 1, e[i].name);
+        fprintf(ptr, "\nEmployee %zu salary: %d\n", i + 1, e[i].salary);
     }
 
     fclose(ptr);
-    printf("\nSaved %d employee details to emp%d.txt!\n", n, n);
+    printf("\nSaved %zu employee details to emp%zu.txt!\n", n, n);
     return 0;
 }
 
 // Function Definition
-void inputEmp(emp e[], int n)
+void inputEmp(emp e[], size_t n)
 {
     puts("\nEnter the employee details one by one!");
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
-        for (int c; (c = getchar())!= '\n' && c != EOF; ); // clear input buffer
-        printf("\nEnter Employee %d| name: ", i + 1);
+        char name[sizeof(e[i].name) / sizeof(e[i].name[0])];
+        for (int c; (c = getchar()) != '\n' && c != EOF;); // clear input buffer
+        printf("\nEnter Employee %zu| name: ", i + 1);
 
-        if (fgets(e[i].name, sizeof(e[i].name), stdin) != NULL)
-            e[i].name[strcspn(e[i].name, "\n")] = '\0'; // remove '\n' at end
+        // removes trailing newline safely
+        if (fgets(name, sizeof(name), stdin) != NULL)
+            name[strcspn(name, "\n")] = '\0';
 
-        printf("Enter Employee %d| salary: ", i + 1);
+        strcpy(e[i].name, name);
+        printf("Enter Employee %zu| salary: ", i + 1);
         scanf("%d", &e[i].salary);
     }
 }

@@ -12,7 +12,7 @@ int main()
 
     // Write to file: fprintf(file_pointer, ...like printf...)
     fprintf(fptr, "The number is %d\n", number);
-    fprintf(fptr, "Thanks for using fprintf", number);
+    fprintf(fptr, "Thanks for using fprintf");
 
     puts("File generated successfully!");
 

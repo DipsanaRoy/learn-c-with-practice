@@ -27,10 +27,10 @@ int main()
     char c = fgetc(ptr); // get first character from the file
     printf("\nFirst character from the file: %c\n", c);
 
-    puts("\nRest of the file contents character-wise:");
-    for (size_t i = 0; i < 5; i++)
+    puts("\nFile contents character-wise:");
+    for (; c != EOF; c = fgetc(ptr))
     {
-        printf("%c\n", fgetc(ptr));
+        printf("%c\n", c);
     }
 
     fclose(ptr); // close the file
