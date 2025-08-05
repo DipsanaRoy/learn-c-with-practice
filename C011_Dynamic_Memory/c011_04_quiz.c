@@ -5,7 +5,7 @@
 
 int main()
 {
-    // I/p: user-defined size
+    // User I/p: size
     size_t size;
     printf("\nHow many floating numbers you want to store?: ");
     scanf("%zu", &size);
@@ -17,7 +17,7 @@ int main()
     putchar('\n');
     for (size_t i = 0; i < size; i++)
     {
-        printf("Enter element |%3d|:", i + 1);
+        printf("Enter element |%3zu|:", i + 1);
         scanf("%f", &ptr[i]);
     }
 
@@ -25,7 +25,7 @@ int main()
     puts("\nStored values:");
     for (size_t i = 0; i < size; i++)
     {
-        printf("Element |%3d|: %f\n", i + 1, ptr[i]);
+        printf("Element |%3zu|: %f\n", i + 1, ptr[i]);
     }
     free(ptr);
     return 0;

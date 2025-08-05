@@ -14,7 +14,7 @@ int main()
     printf("\nHow many integers you want to store?: ");
     scanf("%zu", &len);
     
-    int *arr = (int *)malloc(len * sizeof(*arr));
+    int *arr = (int *)malloc(len * sizeof(*arr)); // Why *arr? Read: C011_NOTES.md
     memFail(arr);
 
     printf("\nEnter %zu element%s one by one\n", len, (len > 1 ? "s" : ""));
@@ -38,7 +38,7 @@ int main()
     displayArray(arr, newLen);
 
     size_t shrinkLen;
-    printf("\nHow many elements do you want to remove? ");
+    printf("\nHow many elements do you want to remove?: ");
     scanf("%zu", &shrinkLen);
 
     newLen -= shrinkLen;

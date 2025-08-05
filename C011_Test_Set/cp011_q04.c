@@ -12,17 +12,17 @@ int main()
     puts("\nStored values:");
     for (size_t i = 0; i < len; i++)
     {
-        printf("Element |%d|: %d\n", i + 1, arr[i]);
+        printf("Element |%zu|: %d\n", i + 1, arr[i]);
     }
 
     len = 10;
     arr = realloc(arr, len * sizeof(*arr));
     arr[5] = 99;
 
-    puts("\nModified Stored values:");
+    puts("\nModified Stored values (garbage values at the end from uninitialized realloc):");
     for (size_t i = 0; i < len; i++)
     {
-        printf("Element |%2d|: %d\n", i + 1, arr[i]);
+        printf("Element |%2zu|: %d\n", i + 1, arr[i]);
     }
     free(arr);
     return 0;
