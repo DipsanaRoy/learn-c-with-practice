@@ -34,7 +34,8 @@ int main()
 // Function Definition
 void show(emp e)
 {
-    printf("\nEmployee Name: %s", e.name);
-    printf("\nCode: %d", e.code);
-    printf("\nSalary: %.2f\n", e.salary);
+    printf("\nEmployee Name: %s"
+           "\nCode: %d"
+           "\nSalary: %.2f\n",
+           e.name, e.code, e.salary);
 }

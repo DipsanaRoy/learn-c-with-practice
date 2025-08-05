@@ -17,7 +17,7 @@ int main()
     struct employee *ptr = &e1;
 
     // struct employee *ptr;
-    // ptr = e1; --> also works
+    // ptr = e1; // also works
 
     (*ptr).code = 19;
     ptr->salary = 10000.57; // '->' (arrow operator) also access pointer to structure sub-variables

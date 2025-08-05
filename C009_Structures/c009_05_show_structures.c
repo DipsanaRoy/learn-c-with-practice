@@ -1,7 +1,7 @@
 // C9.5. Show Structures
 
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 // Structure data types: Declare it before function prototype(s)
 struct employee
@@ -35,7 +35,8 @@ void show(struct employee emp)
 {
     emp.code = 34;
 
-    printf("\nEmployee Name: %s\n", emp.name);
-    printf("Code: %d\n", emp.code);
-    printf("Salary: %.2f\n", emp.salary);
+    printf("\nEmployee Name: %s"
+           "\nCode: %d"
+           "\nSalary: %.2f\n",
+           emp.name, emp.code, emp.salary);
 }
